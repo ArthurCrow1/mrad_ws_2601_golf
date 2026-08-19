@@ -11,7 +11,7 @@ class TTCGapFinder(Node):
     def __init__(self):
         super().__init__('ttc_gap_finder')
 
-        self.declare_parameter('ttc_min', 1.5)  #tiempo a chocar
+        self.declare_parameter('ttc_min', 1.5)  #tiempo a chocar, descartar caminos erroneos
         self.current_vel = 0.0
 
         self.odom_sub = self.create_subscription(Odometry, '/diffdrive_controller/odom', self.odom_callback, 10)
@@ -45,7 +45,7 @@ class TTCGapFinder(Node):
         # rayos seguros dado el ttc_min
         safe_rays = ttcs >= ttc_min_param
         # minimmo de dist para evitar error por v baja
-        safe_rays = safe_rays & (ranges > 0.5)
+        safe_rays = safe_rays & (ranges > 0.3)
         # cortar vision, lo mismo, se puede quitar por el cambio de jorge
         front_mask = (angles > -math.pi/2) & (angles < math.pi/2)
         safe_rays = safe_rays & front_mask

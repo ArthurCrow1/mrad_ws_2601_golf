@@ -12,14 +12,15 @@ import xacro
 def generate_launch_description():
     # parametros
     ttc_recta_arg = DeclareLaunchArgument('ttc_recta', default_value='0.4')
-    ttc_curva_arg = DeclareLaunchArgument('ttc_curva', default_value='1.6')
+    ttc_curva_arg = DeclareLaunchArgument('ttc_curva', default_value='1.5')
     v_max_arg = DeclareLaunchArgument('v_max', default_value='2.0', description='Velocidad máxima en recta')
-    kp_arg = DeclareLaunchArgument('kp_steering', default_value='1.5', description='Ganancia proporcional del volante')
-    kd_arg = DeclareLaunchArgument('kd_steering', default_value='0.5', description='Ganancia derivativa del volante')
-    
-    #1.2
-    #1.0
-    #3.0
+    kp_arg = DeclareLaunchArgument('kp_steering', default_value='2.5', description='Ganancia proporcional del volante')
+    kd_arg = DeclareLaunchArgument('kd_steering', default_value='0.8', description='Ganancia derivativa del volante')
+    #0.4
+    #1.6
+    #2.0
+    #1.5
+    #0.5
     #Encontrar
     gap_finder_node = Node(
         package='ttc_follow_the_gap_2602_golf',

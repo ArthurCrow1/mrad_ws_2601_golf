@@ -17,7 +17,7 @@ e1 = 0
 e2 = 0
 ti = 0.0
 td = 0.9
-kp=7.0
+kp=6.0
 u1 = 0
 
 T=0.05
@@ -34,7 +34,7 @@ class FollowWall(Node):
 
         self.rate=self.samples/(self.max_range-self.min_range)
         self.tetha = 4*((self.max_range-self.min_range)/self.samples)
-        self.fr_range=np.abs(round((self.min_range+np.deg2rad(65))*self.rate))
+        self.fr_range=np.abs(round((self.min_range+np.deg2rad(75))*self.rate))
         self.fl_range=np.abs(round((self.max_range+np.deg2rad(70))*self.rate))
         self.f_range=np.abs(round((self.min_range-np.deg2rad(-5))*self.rate))
         self.width = round((np.deg2rad(5)-np.deg2rad(-5))*self.rate)
@@ -89,12 +89,12 @@ class FollowWall(Node):
             alpha = np.arctan((self.right[-1]*np.cos(self.tetha)-self.right[0])/(self.right[-1]*np.sin(self.tetha)))
             y = self.right[0]*np.cos(alpha)
             ba = self.linear_x*np.sin(alpha)*T
-            e = (1.2 - y - ba)
+            e = (2 - y - ba)
 
 
         match self.estado:
             case Estado.FORWARD:
-                self.linear_x=2.7
+                self.linear_x=3.0
                 # self.get_logger().info("adelante")
 
             case Estado.TURN_RIGHT:
@@ -128,7 +128,7 @@ class FollowWall(Node):
         global e1,e2,u1
 
         if(np.max(self.right_front)>np.max(self.left_front)):
-            if ((np.max(self.right_front)>4 or np.max(self.right)>4.6)):
+            if ((np.max(self.right_front)>4.0 or np.max(self.right)>4.0)):
                 self.estado=Estado.TURN_RIGHT
             elif ((np.min(self.front)>0.6) or ((np.min(self.left)<1.6 or np.min(self.right)<1.3) and (np.min(self.left_front)<1.5 or np.min(self.right_front)<1.5))):
                 self.estado=Estado.FORWARD
@@ -136,15 +136,14 @@ class FollowWall(Node):
                 self.estado=Estado.ERROR
 
         elif(np.max(self.right_front)<np.max(self.left_front)):
-            if (np.max(self.left_front)>3.5 or np.max(self.left)>4.6):
+            if (np.max(self.left_front)>4 or np.max(self.left)>4):
                 self.estado=Estado.TURN_LEFT
             elif ((np.min(self.front)>0.6 ) or ((np.min(self.left)<1.6 or np.min(self.right)<1.3) and (np.min(self.left_front)<1.5 or np.min(self.right_front)<1.5))):
                 self.estado=Estado.FORWARD
             else:
                 self.estado=Estado.ERROR
-            
 
-        # print(f"estado: {self.estado}")
+        
 
     def controller_callback(self):
         global e, e1, e2, u1, ti, td, kp,T,max_rot

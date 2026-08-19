@@ -10,7 +10,7 @@ class FTGNode(Node):
     def __init__(self):
         super().__init__('ftg_node')
         
-        self.declare_parameter('bubble_radius', 0.3)  # radio obstaculo #0.25
+        self.declare_parameter('bubble_radius', 0.28)  # radio obstaculo #0.25
         self.declare_parameter('max_vel', 2.0)        # Velocida max, 2.0 
         self.declare_parameter('kp', 2.0)              
         self.declare_parameter('kd', 0.7)            
