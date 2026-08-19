@@ -1,0 +1,17 @@
+[4.211s] Invoking command in '/home/arthur/mrad_ws_2602_golf/build/description_2602_golf': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/arthur/mrad_ws_2602_golf/build/description_2602_golf/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/arthur/mrad_ws_2602_golf/install/description_2602_golf/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/arthur/mrad_ws_2602_golf/build/description_2602_golf/build --no-deps symlink_data
+[5.309s] running develop
+[5.528s] /usr/lib/python3/dist-packages/setuptools/command/easy_install.py:363: UserWarning: Unbuilt egg for pytest-repeat [unknown version] (/usr/lib/python3/dist-packages)
+[5.528s]   self.local_index = Environment(self.shadow_path + sys.path)
+[5.604s] running egg_info
+[5.642s] writing description_2602_golf.egg-info/PKG-INFO
+[5.642s] writing dependency_links to description_2602_golf.egg-info/dependency_links.txt
+[5.643s] writing requirements to description_2602_golf.egg-info/requires.txt
+[5.643s] writing top-level names to description_2602_golf.egg-info/top_level.txt
+[5.720s] reading manifest file 'description_2602_golf.egg-info/SOURCES.txt'
+[5.721s] writing manifest file 'description_2602_golf.egg-info/SOURCES.txt'
+[5.767s] running build_ext
+[5.767s] Creating /home/arthur/mrad_ws_2602_golf/install/description_2602_golf/lib/python3.12/site-packages/description-2602-golf.egg-link (link to .)
+[5.767s] 
+[5.767s] Installed /home/arthur/mrad_ws_2602_golf/build/description_2602_golf
+[5.767s] running symlink_data
+[5.804s] Invoked command in '/home/arthur/mrad_ws_2602_golf/build/description_2602_golf' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/arthur/mrad_ws_2602_golf/build/description_2602_golf/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/arthur/mrad_ws_2602_golf/install/description_2602_golf/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/arthur/mrad_ws_2602_golf/build/description_2602_golf/build --no-deps symlink_data

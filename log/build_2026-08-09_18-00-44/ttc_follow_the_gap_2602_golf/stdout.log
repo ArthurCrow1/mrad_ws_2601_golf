@@ -1,0 +1,17 @@
+running develop
+running egg_info
+writing ttc_follow_the_gap_2602_golf.egg-info/PKG-INFO
+writing dependency_links to ttc_follow_the_gap_2602_golf.egg-info/dependency_links.txt
+writing entry points to ttc_follow_the_gap_2602_golf.egg-info/entry_points.txt
+writing requirements to ttc_follow_the_gap_2602_golf.egg-info/requires.txt
+writing top-level names to ttc_follow_the_gap_2602_golf.egg-info/top_level.txt
+reading manifest file 'ttc_follow_the_gap_2602_golf.egg-info/SOURCES.txt'
+writing manifest file 'ttc_follow_the_gap_2602_golf.egg-info/SOURCES.txt'
+running build_ext
+Creating /home/arthur/mrad_ws_2602_golf/install/ttc_follow_the_gap_2602_golf/lib/python3.12/site-packages/ttc-follow-the-gap-2602-golf.egg-link (link to .)
+Installing ttc_gap_control script to /home/arthur/mrad_ws_2602_golf/install/ttc_follow_the_gap_2602_golf/lib/ttc_follow_the_gap_2602_golf
+Installing ttc_gap_finder script to /home/arthur/mrad_ws_2602_golf/install/ttc_follow_the_gap_2602_golf/lib/ttc_follow_the_gap_2602_golf
+
+Installed /home/arthur/mrad_ws_2602_golf/build/ttc_follow_the_gap_2602_golf
+running symlink_data
+symbolically linking /home/arthur/mrad_ws_2602_golf/build/ttc_follow_the_gap_2602_golf/launch/ttc_ftg_nodos.launch.py -> /home/arthur/mrad_ws_2602_golf/install/ttc_follow_the_gap_2602_golf/share/ttc_follow_the_gap_2602_golf/launch

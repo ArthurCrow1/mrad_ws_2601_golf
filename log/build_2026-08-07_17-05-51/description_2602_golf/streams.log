@@ -1,0 +1,20 @@
+[6.295s] Invoking command in '/home/arthur/mrad_ws_2602_golf/build/description_2602_golf': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/arthur/mrad_ws_2602_golf/build/description_2602_golf/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/arthur/mrad_ws_2602_golf/install/description_2602_golf/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/arthur/mrad_ws_2602_golf/build/description_2602_golf/build --no-deps symlink_data
+[6.677s] running develop
+[7.045s] /usr/lib/python3/dist-packages/setuptools/command/easy_install.py:363: UserWarning: Unbuilt egg for pytest-repeat [unknown version] (/usr/lib/python3/dist-packages)
+[7.046s]   self.local_index = Environment(self.shadow_path + sys.path)
+[7.090s] running egg_info
+[7.117s] writing description_2602_golf.egg-info/PKG-INFO
+[7.117s] writing dependency_links to description_2602_golf.egg-info/dependency_links.txt
+[7.117s] writing requirements to description_2602_golf.egg-info/requires.txt
+[7.117s] writing top-level names to description_2602_golf.egg-info/top_level.txt
+[7.168s] reading manifest file 'description_2602_golf.egg-info/SOURCES.txt'
+[7.169s] writing manifest file 'description_2602_golf.egg-info/SOURCES.txt'
+[7.197s] running build_ext
+[7.198s] Creating /home/arthur/mrad_ws_2602_golf/install/description_2602_golf/lib/python3.12/site-packages/description-2602-golf.egg-link (link to .)
+[7.199s] 
+[7.199s] Installed /home/arthur/mrad_ws_2602_golf/build/description_2602_golf
+[7.200s] running symlink_data
+[7.200s] symbolically linking /home/arthur/mrad_ws_2602_golf/build/description_2602_golf/diffdrive_urdf/camera.xacro -> /home/arthur/mrad_ws_2602_golf/install/description_2602_golf/share/description_2602_golf/diffdrive_urdf
+[7.200s] symbolically linking /home/arthur/mrad_ws_2602_golf/build/description_2602_golf/diffdrive_urdf/lidar.xacro -> /home/arthur/mrad_ws_2602_golf/install/description_2602_golf/share/description_2602_golf/diffdrive_urdf
+[7.200s] symbolically linking /home/arthur/mrad_ws_2602_golf/build/description_2602_golf/diffdrive_urdf/ros2_control.xacro -> /home/arthur/mrad_ws_2602_golf/install/description_2602_golf/share/description_2602_golf/diffdrive_urdf
+[7.270s] Invoked command in '/home/arthur/mrad_ws_2602_golf/build/description_2602_golf' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/arthur/mrad_ws_2602_golf/build/description_2602_golf/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/arthur/mrad_ws_2602_golf/install/description_2602_golf/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/arthur/mrad_ws_2602_golf/build/description_2602_golf/build --no-deps symlink_data

@@ -1,0 +1,37 @@
+twist_mux:
+  ros__parameters:
+    use_stamped: true
+    
+    topics:
+      navigation:
+        topic   : cmd_vel_nav
+        timeout : 0.5
+        priority: 10
+      joystick  : 
+        topic   : cmd_vel_joy
+        timeout : 0.5
+        priority: 100
+      keyboard  : 
+        topic   : cmd_vel_key
+        timeout : 0.5
+        priority: 50
+      #WF
+      wall_following:
+        topic   : cmd_vel_ctrl
+        timeout : 0.5
+        priority: 120
+      #FTG
+      follow_the_gap:
+        topic   : cmd_vel_ftg
+        timeout : 0.5
+        priority: 130
+      #LKP
+      lane_keep:
+        topic   : cmd_vel_lka
+        timeout : 0.2
+        priority: 150
+      #TTC
+      ttc_brake:
+        topic   : cmd_vel_ttc
+        timeout : 0.2  
+        priority: 200

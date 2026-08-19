@@ -1,0 +1,309 @@
+[1.419s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build', '--symlink-install']
+[1.419s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=True, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=8, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, mixin_files=None, mixin=None, verb_parser=<colcon_mixin.mixin.mixin_argument.MixinArgumentDecorator object at 0x7233c2b6af60>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x7233c1d7ea20>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x7233c1d7ea20>>, mixin_verb=('build',))
+[1.629s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[1.629s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[1.629s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[1.629s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[1.629s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[1.629s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[1.629s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/arthur/mrad_ws_2602_golf'
+[1.629s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[1.629s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[1.630s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[1.630s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[1.630s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[1.630s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[1.630s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[1.630s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[1.630s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[1.699s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[1.699s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[1.699s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[1.699s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[1.699s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[1.699s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[1.700s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[1.700s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[1.700s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[1.700s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[1.700s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[1.700s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[1.700s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[1.700s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[1.701s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[1.701s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[1.701s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[1.701s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[1.701s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[1.701s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[1.701s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[1.701s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[1.701s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[1.701s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[1.701s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[1.702s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[1.702s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[1.702s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[1.702s] Level 1:colcon.colcon_core.package_identification:_identify(src/bringup_2602_golf) by extensions ['ignore', 'ignore_ament_install']
+[1.702s] Level 1:colcon.colcon_core.package_identification:_identify(src/bringup_2602_golf) by extension 'ignore'
+[1.702s] Level 1:colcon.colcon_core.package_identification:_identify(src/bringup_2602_golf) by extension 'ignore_ament_install'
+[1.702s] Level 1:colcon.colcon_core.package_identification:_identify(src/bringup_2602_golf) by extensions ['colcon_pkg']
+[1.702s] Level 1:colcon.colcon_core.package_identification:_identify(src/bringup_2602_golf) by extension 'colcon_pkg'
+[1.702s] Level 1:colcon.colcon_core.package_identification:_identify(src/bringup_2602_golf) by extensions ['colcon_meta']
+[1.702s] Level 1:colcon.colcon_core.package_identification:_identify(src/bringup_2602_golf) by extension 'colcon_meta'
+[1.702s] Level 1:colcon.colcon_core.package_identification:_identify(src/bringup_2602_golf) by extensions ['ros']
+[1.702s] Level 1:colcon.colcon_core.package_identification:_identify(src/bringup_2602_golf) by extension 'ros'
+[1.732s] DEBUG:colcon.colcon_core.package_identification:Package 'src/bringup_2602_golf' with type 'ros.ament_python' and name 'bringup_2602_golf'
+[1.732s] Level 1:colcon.colcon_core.package_identification:_identify(src/control_2602_golf) by extensions ['ignore', 'ignore_ament_install']
+[1.733s] Level 1:colcon.colcon_core.package_identification:_identify(src/control_2602_golf) by extension 'ignore'
+[1.733s] Level 1:colcon.colcon_core.package_identification:_identify(src/control_2602_golf) by extension 'ignore_ament_install'
+[1.733s] Level 1:colcon.colcon_core.package_identification:_identify(src/control_2602_golf) by extensions ['colcon_pkg']
+[1.733s] Level 1:colcon.colcon_core.package_identification:_identify(src/control_2602_golf) by extension 'colcon_pkg'
+[1.733s] Level 1:colcon.colcon_core.package_identification:_identify(src/control_2602_golf) by extensions ['colcon_meta']
+[1.733s] Level 1:colcon.colcon_core.package_identification:_identify(src/control_2602_golf) by extension 'colcon_meta'
+[1.733s] Level 1:colcon.colcon_core.package_identification:_identify(src/control_2602_golf) by extensions ['ros']
+[1.733s] Level 1:colcon.colcon_core.package_identification:_identify(src/control_2602_golf) by extension 'ros'
+[1.747s] DEBUG:colcon.colcon_core.package_identification:Package 'src/control_2602_golf' with type 'ros.ament_cmake' and name 'control_2602_golf'
+[1.747s] Level 1:colcon.colcon_core.package_identification:_identify(src/description_2602_golf) by extensions ['ignore', 'ignore_ament_install']
+[1.747s] Level 1:colcon.colcon_core.package_identification:_identify(src/description_2602_golf) by extension 'ignore'
+[1.747s] Level 1:colcon.colcon_core.package_identification:_identify(src/description_2602_golf) by extension 'ignore_ament_install'
+[1.747s] Level 1:colcon.colcon_core.package_identification:_identify(src/description_2602_golf) by extensions ['colcon_pkg']
+[1.747s] Level 1:colcon.colcon_core.package_identification:_identify(src/description_2602_golf) by extension 'colcon_pkg'
+[1.747s] Level 1:colcon.colcon_core.package_identification:_identify(src/description_2602_golf) by extensions ['colcon_meta']
+[1.747s] Level 1:colcon.colcon_core.package_identification:_identify(src/description_2602_golf) by extension 'colcon_meta'
+[1.747s] Level 1:colcon.colcon_core.package_identification:_identify(src/description_2602_golf) by extensions ['ros']
+[1.747s] Level 1:colcon.colcon_core.package_identification:_identify(src/description_2602_golf) by extension 'ros'
+[1.756s] DEBUG:colcon.colcon_core.package_identification:Package 'src/description_2602_golf' with type 'ros.ament_python' and name 'description_2602_golf'
+[1.756s] Level 1:colcon.colcon_core.package_identification:_identify(src/gazebo_2602_golf) by extensions ['ignore', 'ignore_ament_install']
+[1.756s] Level 1:colcon.colcon_core.package_identification:_identify(src/gazebo_2602_golf) by extension 'ignore'
+[1.757s] Level 1:colcon.colcon_core.package_identification:_identify(src/gazebo_2602_golf) by extension 'ignore_ament_install'
+[1.757s] Level 1:colcon.colcon_core.package_identification:_identify(src/gazebo_2602_golf) by extensions ['colcon_pkg']
+[1.757s] Level 1:colcon.colcon_core.package_identification:_identify(src/gazebo_2602_golf) by extension 'colcon_pkg'
+[1.757s] Level 1:colcon.colcon_core.package_identification:_identify(src/gazebo_2602_golf) by extensions ['colcon_meta']
+[1.757s] Level 1:colcon.colcon_core.package_identification:_identify(src/gazebo_2602_golf) by extension 'colcon_meta'
+[1.757s] Level 1:colcon.colcon_core.package_identification:_identify(src/gazebo_2602_golf) by extensions ['ros']
+[1.757s] Level 1:colcon.colcon_core.package_identification:_identify(src/gazebo_2602_golf) by extension 'ros'
+[1.758s] DEBUG:colcon.colcon_core.package_identification:Package 'src/gazebo_2602_golf' with type 'ros.ament_python' and name 'gazebo_2602_golf'
+[1.758s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[1.758s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[1.758s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[1.758s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[1.758s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[1.855s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[1.855s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[1.887s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 4 installed packages in /home/arthur/mrad_ws_2602_golf/install
+[1.887s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 4 installed packages in /home/arthur/mrad_ws_2602_zulu/install
+[1.887s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 1 installed packages in /home/arthur/remen_tuto/install
+[1.889s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 532 installed packages in /opt/ros/jazzy
+[1.891s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[2.042s] Level 5:colcon.colcon_core.verb:set package 'bringup_2602_golf' build argument 'cmake_args' from command line to 'None'
+[2.042s] Level 5:colcon.colcon_core.verb:set package 'bringup_2602_golf' build argument 'cmake_target' from command line to 'None'
+[2.042s] Level 5:colcon.colcon_core.verb:set package 'bringup_2602_golf' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[2.042s] Level 5:colcon.colcon_core.verb:set package 'bringup_2602_golf' build argument 'cmake_clean_cache' from command line to 'False'
+[2.042s] Level 5:colcon.colcon_core.verb:set package 'bringup_2602_golf' build argument 'cmake_clean_first' from command line to 'False'
+[2.042s] Level 5:colcon.colcon_core.verb:set package 'bringup_2602_golf' build argument 'cmake_force_configure' from command line to 'False'
+[2.042s] Level 5:colcon.colcon_core.verb:set package 'bringup_2602_golf' build argument 'ament_cmake_args' from command line to 'None'
+[2.042s] Level 5:colcon.colcon_core.verb:set package 'bringup_2602_golf' build argument 'catkin_cmake_args' from command line to 'None'
+[2.042s] Level 5:colcon.colcon_core.verb:set package 'bringup_2602_golf' build argument 'catkin_skip_building_tests' from command line to 'False'
+[2.042s] DEBUG:colcon.colcon_core.verb:Building package 'bringup_2602_golf' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/arthur/mrad_ws_2602_golf/build/bringup_2602_golf', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/arthur/mrad_ws_2602_golf/install/bringup_2602_golf', 'merge_install': False, 'path': '/home/arthur/mrad_ws_2602_golf/src/bringup_2602_golf', 'symlink_install': True, 'test_result_base': None}
+[2.042s] Level 5:colcon.colcon_core.verb:set package 'control_2602_golf' build argument 'cmake_args' from command line to 'None'
+[2.042s] Level 5:colcon.colcon_core.verb:set package 'control_2602_golf' build argument 'cmake_target' from command line to 'None'
+[2.042s] Level 5:colcon.colcon_core.verb:set package 'control_2602_golf' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[2.043s] Level 5:colcon.colcon_core.verb:set package 'control_2602_golf' build argument 'cmake_clean_cache' from command line to 'False'
+[2.043s] Level 5:colcon.colcon_core.verb:set package 'control_2602_golf' build argument 'cmake_clean_first' from command line to 'False'
+[2.043s] Level 5:colcon.colcon_core.verb:set package 'control_2602_golf' build argument 'cmake_force_configure' from command line to 'False'
+[2.043s] Level 5:colcon.colcon_core.verb:set package 'control_2602_golf' build argument 'ament_cmake_args' from command line to 'None'
+[2.043s] Level 5:colcon.colcon_core.verb:set package 'control_2602_golf' build argument 'catkin_cmake_args' from command line to 'None'
+[2.043s] Level 5:colcon.colcon_core.verb:set package 'control_2602_golf' build argument 'catkin_skip_building_tests' from command line to 'False'
+[2.043s] DEBUG:colcon.colcon_core.verb:Building package 'control_2602_golf' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/arthur/mrad_ws_2602_golf/build/control_2602_golf', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/arthur/mrad_ws_2602_golf/install/control_2602_golf', 'merge_install': False, 'path': '/home/arthur/mrad_ws_2602_golf/src/control_2602_golf', 'symlink_install': True, 'test_result_base': None}
+[2.043s] Level 5:colcon.colcon_core.verb:set package 'description_2602_golf' build argument 'cmake_args' from command line to 'None'
+[2.043s] Level 5:colcon.colcon_core.verb:set package 'description_2602_golf' build argument 'cmake_target' from command line to 'None'
+[2.043s] Level 5:colcon.colcon_core.verb:set package 'description_2602_golf' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[2.043s] Level 5:colcon.colcon_core.verb:set package 'description_2602_golf' build argument 'cmake_clean_cache' from command line to 'False'
+[2.043s] Level 5:colcon.colcon_core.verb:set package 'description_2602_golf' build argument 'cmake_clean_first' from command line to 'False'
+[2.043s] Level 5:colcon.colcon_core.verb:set package 'description_2602_golf' build argument 'cmake_force_configure' from command line to 'False'
+[2.043s] Level 5:colcon.colcon_core.verb:set package 'description_2602_golf' build argument 'ament_cmake_args' from command line to 'None'
+[2.043s] Level 5:colcon.colcon_core.verb:set package 'description_2602_golf' build argument 'catkin_cmake_args' from command line to 'None'
+[2.043s] Level 5:colcon.colcon_core.verb:set package 'description_2602_golf' build argument 'catkin_skip_building_tests' from command line to 'False'
+[2.043s] DEBUG:colcon.colcon_core.verb:Building package 'description_2602_golf' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/arthur/mrad_ws_2602_golf/build/description_2602_golf', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/arthur/mrad_ws_2602_golf/install/description_2602_golf', 'merge_install': False, 'path': '/home/arthur/mrad_ws_2602_golf/src/description_2602_golf', 'symlink_install': True, 'test_result_base': None}
+[2.044s] Level 5:colcon.colcon_core.verb:set package 'gazebo_2602_golf' build argument 'cmake_args' from command line to 'None'
+[2.044s] Level 5:colcon.colcon_core.verb:set package 'gazebo_2602_golf' build argument 'cmake_target' from command line to 'None'
+[2.044s] Level 5:colcon.colcon_core.verb:set package 'gazebo_2602_golf' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[2.044s] Level 5:colcon.colcon_core.verb:set package 'gazebo_2602_golf' build argument 'cmake_clean_cache' from command line to 'False'
+[2.044s] Level 5:colcon.colcon_core.verb:set package 'gazebo_2602_golf' build argument 'cmake_clean_first' from command line to 'False'
+[2.044s] Level 5:colcon.colcon_core.verb:set package 'gazebo_2602_golf' build argument 'cmake_force_configure' from command line to 'False'
+[2.044s] Level 5:colcon.colcon_core.verb:set package 'gazebo_2602_golf' build argument 'ament_cmake_args' from command line to 'None'
+[2.044s] Level 5:colcon.colcon_core.verb:set package 'gazebo_2602_golf' build argument 'catkin_cmake_args' from command line to 'None'
+[2.044s] Level 5:colcon.colcon_core.verb:set package 'gazebo_2602_golf' build argument 'catkin_skip_building_tests' from command line to 'False'
+[2.044s] DEBUG:colcon.colcon_core.verb:Building package 'gazebo_2602_golf' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/arthur/mrad_ws_2602_golf/build/gazebo_2602_golf', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/arthur/mrad_ws_2602_golf/install/gazebo_2602_golf', 'merge_install': False, 'path': '/home/arthur/mrad_ws_2602_golf/src/gazebo_2602_golf', 'symlink_install': True, 'test_result_base': None}
+[2.044s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[2.045s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[2.046s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/arthur/mrad_ws_2602_golf/src/bringup_2602_golf' with build type 'ament_python'
+[2.046s] Level 1:colcon.colcon_core.shell:create_environment_hook('bringup_2602_golf', 'ament_prefix_path')
+[2.051s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[2.051s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/arthur/mrad_ws_2602_golf/install/bringup_2602_golf/share/bringup_2602_golf/hook/ament_prefix_path.ps1'
+[2.061s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/arthur/mrad_ws_2602_golf/install/bringup_2602_golf/share/bringup_2602_golf/hook/ament_prefix_path.dsv'
+[2.078s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/arthur/mrad_ws_2602_golf/install/bringup_2602_golf/share/bringup_2602_golf/hook/ament_prefix_path.sh'
+[2.080s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[2.080s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[2.086s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/arthur/mrad_ws_2602_golf/src/control_2602_golf' with build type 'ament_cmake'
+[2.086s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/arthur/mrad_ws_2602_golf/src/control_2602_golf'
+[2.087s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[2.087s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[2.096s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/arthur/mrad_ws_2602_golf/src/description_2602_golf' with build type 'ament_python'
+[2.096s] Level 1:colcon.colcon_core.shell:create_environment_hook('description_2602_golf', 'ament_prefix_path')
+[2.097s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/arthur/mrad_ws_2602_golf/install/description_2602_golf/share/description_2602_golf/hook/ament_prefix_path.ps1'
+[2.097s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/arthur/mrad_ws_2602_golf/install/description_2602_golf/share/description_2602_golf/hook/ament_prefix_path.dsv'
+[2.098s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/arthur/mrad_ws_2602_golf/install/description_2602_golf/share/description_2602_golf/hook/ament_prefix_path.sh'
+[2.099s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[2.099s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[2.105s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/arthur/mrad_ws_2602_golf/src/gazebo_2602_golf' with build type 'ament_python'
+[2.106s] Level 1:colcon.colcon_core.shell:create_environment_hook('gazebo_2602_golf', 'ament_prefix_path')
+[2.106s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/arthur/mrad_ws_2602_golf/install/gazebo_2602_golf/share/gazebo_2602_golf/hook/ament_prefix_path.ps1'
+[2.107s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/arthur/mrad_ws_2602_golf/install/gazebo_2602_golf/share/gazebo_2602_golf/hook/ament_prefix_path.dsv'
+[2.107s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/arthur/mrad_ws_2602_golf/install/gazebo_2602_golf/share/gazebo_2602_golf/hook/ament_prefix_path.sh'
+[2.108s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[2.108s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[2.381s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/arthur/mrad_ws_2602_golf/src/bringup_2602_golf'
+[2.381s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[2.381s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[2.448s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/arthur/mrad_ws_2602_golf/build/control_2602_golf': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/arthur/mrad_ws_2602_zulu/install/gazebo_2602_zulu:/home/arthur/mrad_ws_2602_zulu/install/description_2602_zulu:/home/arthur/mrad_ws_2602_zulu/install/bringup_2602_zulu:/home/arthur/mrad_ws_2602_golf/install/gazebo_2602_golf:/home/arthur/mrad_ws_2602_golf/install/description_2602_golf:/home/arthur/mrad_ws_2602_golf/install/bringup_2602_golf:/home/arthur/remen_tuto/install/turtle_move_pkg_NNAA:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/arthur/mrad_ws_2602_golf/build/control_2602_golf -- -j8 -l8
+[2.745s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/arthur/mrad_ws_2602_golf/src/description_2602_golf'
+[2.746s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[2.746s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[3.056s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/arthur/mrad_ws_2602_golf/src/gazebo_2602_golf'
+[3.057s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[3.057s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[3.066s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/arthur/mrad_ws_2602_golf/build/control_2602_golf' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/arthur/mrad_ws_2602_zulu/install/gazebo_2602_zulu:/home/arthur/mrad_ws_2602_zulu/install/description_2602_zulu:/home/arthur/mrad_ws_2602_zulu/install/bringup_2602_zulu:/home/arthur/mrad_ws_2602_golf/install/gazebo_2602_golf:/home/arthur/mrad_ws_2602_golf/install/description_2602_golf:/home/arthur/mrad_ws_2602_golf/install/bringup_2602_golf:/home/arthur/remen_tuto/install/turtle_move_pkg_NNAA:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/arthur/mrad_ws_2602_golf/build/control_2602_golf -- -j8 -l8
+[3.078s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/arthur/mrad_ws_2602_golf/build/control_2602_golf': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/arthur/mrad_ws_2602_zulu/install/gazebo_2602_zulu:/home/arthur/mrad_ws_2602_zulu/install/description_2602_zulu:/home/arthur/mrad_ws_2602_zulu/install/bringup_2602_zulu:/home/arthur/mrad_ws_2602_golf/install/gazebo_2602_golf:/home/arthur/mrad_ws_2602_golf/install/description_2602_golf:/home/arthur/mrad_ws_2602_golf/install/bringup_2602_golf:/home/arthur/remen_tuto/install/turtle_move_pkg_NNAA:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/arthur/mrad_ws_2602_golf/build/control_2602_golf
+[3.184s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(control_2602_golf)
+[3.185s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/arthur/mrad_ws_2602_golf/build/control_2602_golf' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/arthur/mrad_ws_2602_zulu/install/gazebo_2602_zulu:/home/arthur/mrad_ws_2602_zulu/install/description_2602_zulu:/home/arthur/mrad_ws_2602_zulu/install/bringup_2602_zulu:/home/arthur/mrad_ws_2602_golf/install/gazebo_2602_golf:/home/arthur/mrad_ws_2602_golf/install/description_2602_golf:/home/arthur/mrad_ws_2602_golf/install/bringup_2602_golf:/home/arthur/remen_tuto/install/turtle_move_pkg_NNAA:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/arthur/mrad_ws_2602_golf/build/control_2602_golf
+[3.190s] Level 1:colcon.colcon_core.environment:checking '/home/arthur/mrad_ws_2602_golf/install/control_2602_golf' for CMake module files
+[3.191s] Level 1:colcon.colcon_core.environment:checking '/home/arthur/mrad_ws_2602_golf/install/control_2602_golf' for CMake config files
+[3.192s] Level 1:colcon.colcon_core.shell:create_environment_hook('control_2602_golf', 'cmake_prefix_path')
+[3.192s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/arthur/mrad_ws_2602_golf/install/control_2602_golf/share/control_2602_golf/hook/cmake_prefix_path.ps1'
+[3.193s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/arthur/mrad_ws_2602_golf/install/control_2602_golf/share/control_2602_golf/hook/cmake_prefix_path.dsv'
+[3.194s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/arthur/mrad_ws_2602_golf/install/control_2602_golf/share/control_2602_golf/hook/cmake_prefix_path.sh'
+[3.195s] Level 1:colcon.colcon_core.environment:checking '/home/arthur/mrad_ws_2602_golf/install/control_2602_golf/bin'
+[3.195s] Level 1:colcon.colcon_core.environment:checking '/home/arthur/mrad_ws_2602_golf/install/control_2602_golf/lib/pkgconfig/control_2602_golf.pc'
+[3.195s] Level 1:colcon.colcon_core.environment:checking '/home/arthur/mrad_ws_2602_golf/install/control_2602_golf/lib/python3.12/site-packages'
+[3.196s] Level 1:colcon.colcon_core.environment:checking '/home/arthur/mrad_ws_2602_golf/install/control_2602_golf/bin'
+[3.196s] INFO:colcon.colcon_core.shell:Creating package script '/home/arthur/mrad_ws_2602_golf/install/control_2602_golf/share/control_2602_golf/package.ps1'
+[3.199s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/arthur/mrad_ws_2602_golf/install/control_2602_golf/share/control_2602_golf/package.dsv'
+[3.200s] INFO:colcon.colcon_core.shell:Creating package script '/home/arthur/mrad_ws_2602_golf/install/control_2602_golf/share/control_2602_golf/package.sh'
+[3.201s] INFO:colcon.colcon_core.shell:Creating package script '/home/arthur/mrad_ws_2602_golf/install/control_2602_golf/share/control_2602_golf/package.bash'
+[3.202s] INFO:colcon.colcon_core.shell:Creating package script '/home/arthur/mrad_ws_2602_golf/install/control_2602_golf/share/control_2602_golf/package.zsh'
+[3.203s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/arthur/mrad_ws_2602_golf/install/control_2602_golf/share/colcon-core/packages/control_2602_golf)
+[3.204s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(control_2602_golf)
+[3.205s] Level 1:colcon.colcon_core.environment:checking '/home/arthur/mrad_ws_2602_golf/install/control_2602_golf' for CMake module files
+[3.206s] Level 1:colcon.colcon_core.environment:checking '/home/arthur/mrad_ws_2602_golf/install/control_2602_golf' for CMake config files
+[3.206s] Level 1:colcon.colcon_core.shell:create_environment_hook('control_2602_golf', 'cmake_prefix_path')
+[3.206s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/arthur/mrad_ws_2602_golf/install/control_2602_golf/share/control_2602_golf/hook/cmake_prefix_path.ps1'
+[3.207s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/arthur/mrad_ws_2602_golf/install/control_2602_golf/share/control_2602_golf/hook/cmake_prefix_path.dsv'
+[3.208s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/arthur/mrad_ws_2602_golf/install/control_2602_golf/share/control_2602_golf/hook/cmake_prefix_path.sh'
+[3.208s] Level 1:colcon.colcon_core.environment:checking '/home/arthur/mrad_ws_2602_golf/install/control_2602_golf/bin'
+[3.209s] Level 1:colcon.colcon_core.environment:checking '/home/arthur/mrad_ws_2602_golf/install/control_2602_golf/lib/pkgconfig/control_2602_golf.pc'
+[3.209s] Level 1:colcon.colcon_core.environment:checking '/home/arthur/mrad_ws_2602_golf/install/control_2602_golf/lib/python3.12/site-packages'
+[3.210s] Level 1:colcon.colcon_core.environment:checking '/home/arthur/mrad_ws_2602_golf/install/control_2602_golf/bin'
+[3.210s] INFO:colcon.colcon_core.shell:Creating package script '/home/arthur/mrad_ws_2602_golf/install/control_2602_golf/share/control_2602_golf/package.ps1'
+[3.211s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/arthur/mrad_ws_2602_golf/install/control_2602_golf/share/control_2602_golf/package.dsv'
+[3.212s] INFO:colcon.colcon_core.shell:Creating package script '/home/arthur/mrad_ws_2602_golf/install/control_2602_golf/share/control_2602_golf/package.sh'
+[3.213s] INFO:colcon.colcon_core.shell:Creating package script '/home/arthur/mrad_ws_2602_golf/install/control_2602_golf/share/control_2602_golf/package.bash'
+[3.214s] INFO:colcon.colcon_core.shell:Creating package script '/home/arthur/mrad_ws_2602_golf/install/control_2602_golf/share/control_2602_golf/package.zsh'
+[3.215s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/arthur/mrad_ws_2602_golf/install/control_2602_golf/share/colcon-core/packages/control_2602_golf)
+[8.146s] DEBUG:colcon.colcon_core.task.python.build:Available setuptools commands: install, install_headers, ptr, install_scripts, upload, install_lib, upload_docs, build_scripts, sdist, egg_info, compile_catalog, bdist_egg, bdist_wheel, setopt, register, build_clib, editable_wheel, build_ext, bdist_rpm, install_egg_info, easy_install, update_catalog, dist_info, clean, rotate, test, check, install_data, bdist_dumb, init_catalog, extract_messages, pytest, build, alias, saveopts, develop, symlink_data, bdist, build_py
+[8.147s] DEBUG:colcon.colcon_core.task.python.build:Available setuptools commands: install, install_headers, ptr, install_scripts, upload, install_lib, upload_docs, build_scripts, sdist, egg_info, compile_catalog, bdist_egg, bdist_wheel, setopt, register, build_clib, editable_wheel, build_ext, bdist_rpm, install_egg_info, easy_install, update_catalog, dist_info, clean, rotate, test, check, install_data, bdist_dumb, init_catalog, extract_messages, pytest, build, alias, saveopts, develop, symlink_data, bdist, build_py
+[8.148s] DEBUG:colcon.colcon_core.task.python.build:Available setuptools commands: install, install_headers, ptr, install_scripts, upload, install_lib, upload_docs, build_scripts, sdist, egg_info, compile_catalog, bdist_egg, bdist_wheel, setopt, register, build_clib, editable_wheel, build_ext, bdist_rpm, install_egg_info, easy_install, update_catalog, dist_info, clean, rotate, test, check, install_data, bdist_dumb, init_catalog, extract_messages, pytest, build, alias, saveopts, develop, symlink_data, bdist, build_py
+[8.655s] DEBUG:colcon.colcon_core.task.python.build:Available setuptools 'develop' options: --no-user-cfg, --script-dir, --optimize, --verbose, --allow-hosts, --upgrade, --no-deps, --uninstall, --always-unzip, --record, --dry-run, --multi-version, --site-dirs, --editable, --build-directory, --exclude-scripts, --help, --no-find-links, --find-links, --version, --zip-ok, --local-snapshots-ok, --index-url, --install-layout, --user, --prefix, --egg-path, --install-dir, --force-installation-into-system-dir, --quiet, --always-copy
+[8.657s] DEBUG:colcon.colcon_core.task.python.build:Available setuptools 'develop' options: --no-user-cfg, --script-dir, --optimize, --verbose, --allow-hosts, --upgrade, --no-deps, --uninstall, --always-unzip, --record, --dry-run, --multi-version, --site-dirs, --editable, --build-directory, --exclude-scripts, --help, --no-find-links, --find-links, --version, --zip-ok, --local-snapshots-ok, --index-url, --install-layout, --user, --prefix, --egg-path, --install-dir, --force-installation-into-system-dir, --quiet, --always-copy
+[8.658s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/arthur/mrad_ws_2602_golf/build/gazebo_2602_golf': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/arthur/mrad_ws_2602_golf/build/gazebo_2602_golf/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/arthur/mrad_ws_2602_golf/install/gazebo_2602_golf/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/arthur/mrad_ws_2602_golf/build/gazebo_2602_golf/build --no-deps symlink_data
+[8.660s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/arthur/mrad_ws_2602_golf/build/description_2602_golf': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/arthur/mrad_ws_2602_golf/build/description_2602_golf/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/arthur/mrad_ws_2602_golf/install/description_2602_golf/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/arthur/mrad_ws_2602_golf/build/description_2602_golf/build --no-deps symlink_data
+[8.661s] DEBUG:colcon.colcon_core.task.python.build:Available setuptools 'develop' options: --no-user-cfg, --script-dir, --optimize, --verbose, --allow-hosts, --upgrade, --no-deps, --uninstall, --always-unzip, --record, --dry-run, --multi-version, --site-dirs, --editable, --build-directory, --exclude-scripts, --help, --no-find-links, --find-links, --version, --zip-ok, --local-snapshots-ok, --index-url, --install-layout, --user, --prefix, --egg-path, --install-dir, --force-installation-into-system-dir, --quiet, --always-copy
+[8.663s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/arthur/mrad_ws_2602_golf/build/bringup_2602_golf': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/arthur/mrad_ws_2602_golf/build/bringup_2602_golf/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/arthur/mrad_ws_2602_golf/install/bringup_2602_golf/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/arthur/mrad_ws_2602_golf/build/bringup_2602_golf/build --no-deps symlink_data
+[9.816s] Level 1:colcon.colcon_core.shell:create_environment_hook('bringup_2602_golf', 'pythonpath_develop')
+[9.817s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/arthur/mrad_ws_2602_golf/build/bringup_2602_golf/share/bringup_2602_golf/hook/pythonpath_develop.ps1'
+[9.817s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/arthur/mrad_ws_2602_golf/build/bringup_2602_golf' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/arthur/mrad_ws_2602_golf/build/bringup_2602_golf/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/arthur/mrad_ws_2602_golf/install/bringup_2602_golf/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/arthur/mrad_ws_2602_golf/build/bringup_2602_golf/build --no-deps symlink_data
+[9.818s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/arthur/mrad_ws_2602_golf/build/bringup_2602_golf/share/bringup_2602_golf/hook/pythonpath_develop.dsv'
+[9.818s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/arthur/mrad_ws_2602_golf/build/bringup_2602_golf/share/bringup_2602_golf/hook/pythonpath_develop.sh'
+[9.819s] Level 1:colcon.colcon_core.environment:checking '/home/arthur/mrad_ws_2602_golf/install/bringup_2602_golf' for CMake module files
+[9.819s] Level 1:colcon.colcon_core.environment:checking '/home/arthur/mrad_ws_2602_golf/install/bringup_2602_golf' for CMake config files
+[9.820s] Level 1:colcon.colcon_core.environment:checking '/home/arthur/mrad_ws_2602_golf/install/bringup_2602_golf/lib'
+[9.820s] Level 1:colcon.colcon_core.environment:checking '/home/arthur/mrad_ws_2602_golf/install/bringup_2602_golf/bin'
+[9.820s] Level 1:colcon.colcon_core.environment:checking '/home/arthur/mrad_ws_2602_golf/install/bringup_2602_golf/lib/pkgconfig/bringup_2602_golf.pc'
+[9.820s] Level 1:colcon.colcon_core.environment:checking '/home/arthur/mrad_ws_2602_golf/install/bringup_2602_golf/lib/python3.12/site-packages'
+[9.821s] Level 1:colcon.colcon_core.shell:create_environment_hook('bringup_2602_golf', 'pythonpath')
+[9.821s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/arthur/mrad_ws_2602_golf/install/bringup_2602_golf/share/bringup_2602_golf/hook/pythonpath.ps1'
+[9.821s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/arthur/mrad_ws_2602_golf/install/bringup_2602_golf/share/bringup_2602_golf/hook/pythonpath.dsv'
+[9.822s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/arthur/mrad_ws_2602_golf/install/bringup_2602_golf/share/bringup_2602_golf/hook/pythonpath.sh'
+[9.823s] Level 1:colcon.colcon_core.environment:checking '/home/arthur/mrad_ws_2602_golf/install/bringup_2602_golf/bin'
+[9.823s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(bringup_2602_golf)
+[9.823s] INFO:colcon.colcon_core.shell:Creating package script '/home/arthur/mrad_ws_2602_golf/install/bringup_2602_golf/share/bringup_2602_golf/package.ps1'
+[9.824s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/arthur/mrad_ws_2602_golf/install/bringup_2602_golf/share/bringup_2602_golf/package.dsv'
+[9.824s] INFO:colcon.colcon_core.shell:Creating package script '/home/arthur/mrad_ws_2602_golf/install/bringup_2602_golf/share/bringup_2602_golf/package.sh'
+[9.825s] INFO:colcon.colcon_core.shell:Creating package script '/home/arthur/mrad_ws_2602_golf/install/bringup_2602_golf/share/bringup_2602_golf/package.bash'
+[9.825s] INFO:colcon.colcon_core.shell:Creating package script '/home/arthur/mrad_ws_2602_golf/install/bringup_2602_golf/share/bringup_2602_golf/package.zsh'
+[9.826s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/arthur/mrad_ws_2602_golf/install/bringup_2602_golf/share/colcon-core/packages/bringup_2602_golf)
+[9.830s] Level 1:colcon.colcon_core.shell:create_environment_hook('gazebo_2602_golf', 'pythonpath_develop')
+[9.831s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/arthur/mrad_ws_2602_golf/build/gazebo_2602_golf/share/gazebo_2602_golf/hook/pythonpath_develop.ps1'
+[9.831s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/arthur/mrad_ws_2602_golf/build/gazebo_2602_golf' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/arthur/mrad_ws_2602_golf/build/gazebo_2602_golf/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/arthur/mrad_ws_2602_golf/install/gazebo_2602_golf/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/arthur/mrad_ws_2602_golf/build/gazebo_2602_golf/build --no-deps symlink_data
+[9.832s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/arthur/mrad_ws_2602_golf/build/gazebo_2602_golf/share/gazebo_2602_golf/hook/pythonpath_develop.dsv'
+[9.833s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/arthur/mrad_ws_2602_golf/build/gazebo_2602_golf/share/gazebo_2602_golf/hook/pythonpath_develop.sh'
+[9.833s] Level 1:colcon.colcon_core.environment:checking '/home/arthur/mrad_ws_2602_golf/install/gazebo_2602_golf' for CMake module files
+[9.834s] Level 1:colcon.colcon_core.environment:checking '/home/arthur/mrad_ws_2602_golf/install/gazebo_2602_golf' for CMake config files
+[9.835s] Level 1:colcon.colcon_core.environment:checking '/home/arthur/mrad_ws_2602_golf/install/gazebo_2602_golf/lib'
+[9.835s] Level 1:colcon.colcon_core.environment:checking '/home/arthur/mrad_ws_2602_golf/install/gazebo_2602_golf/bin'
+[9.835s] Level 1:colcon.colcon_core.environment:checking '/home/arthur/mrad_ws_2602_golf/install/gazebo_2602_golf/lib/pkgconfig/gazebo_2602_golf.pc'
+[9.835s] Level 1:colcon.colcon_core.environment:checking '/home/arthur/mrad_ws_2602_golf/install/gazebo_2602_golf/lib/python3.12/site-packages'
+[9.836s] Level 1:colcon.colcon_core.shell:create_environment_hook('gazebo_2602_golf', 'pythonpath')
+[9.836s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/arthur/mrad_ws_2602_golf/install/gazebo_2602_golf/share/gazebo_2602_golf/hook/pythonpath.ps1'
+[9.836s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/arthur/mrad_ws_2602_golf/install/gazebo_2602_golf/share/gazebo_2602_golf/hook/pythonpath.dsv'
+[9.837s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/arthur/mrad_ws_2602_golf/install/gazebo_2602_golf/share/gazebo_2602_golf/hook/pythonpath.sh'
+[9.838s] Level 1:colcon.colcon_core.environment:checking '/home/arthur/mrad_ws_2602_golf/install/gazebo_2602_golf/bin'
+[9.838s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(gazebo_2602_golf)
+[9.838s] INFO:colcon.colcon_core.shell:Creating package script '/home/arthur/mrad_ws_2602_golf/install/gazebo_2602_golf/share/gazebo_2602_golf/package.ps1'
+[9.839s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/arthur/mrad_ws_2602_golf/install/gazebo_2602_golf/share/gazebo_2602_golf/package.dsv'
+[9.840s] INFO:colcon.colcon_core.shell:Creating package script '/home/arthur/mrad_ws_2602_golf/install/gazebo_2602_golf/share/gazebo_2602_golf/package.sh'
+[9.841s] INFO:colcon.colcon_core.shell:Creating package script '/home/arthur/mrad_ws_2602_golf/install/gazebo_2602_golf/share/gazebo_2602_golf/package.bash'
+[9.841s] INFO:colcon.colcon_core.shell:Creating package script '/home/arthur/mrad_ws_2602_golf/install/gazebo_2602_golf/share/gazebo_2602_golf/package.zsh'
+[9.841s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/arthur/mrad_ws_2602_golf/install/gazebo_2602_golf/share/colcon-core/packages/gazebo_2602_golf)
+[9.842s] Level 1:colcon.colcon_core.shell:create_environment_hook('description_2602_golf', 'pythonpath_develop')
+[9.843s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/arthur/mrad_ws_2602_golf/build/description_2602_golf/share/description_2602_golf/hook/pythonpath_develop.ps1'
+[9.843s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/arthur/mrad_ws_2602_golf/build/description_2602_golf' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/arthur/mrad_ws_2602_golf/build/description_2602_golf/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/arthur/mrad_ws_2602_golf/install/description_2602_golf/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/arthur/mrad_ws_2602_golf/build/description_2602_golf/build --no-deps symlink_data
+[9.844s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/arthur/mrad_ws_2602_golf/build/description_2602_golf/share/description_2602_golf/hook/pythonpath_develop.dsv'
+[9.844s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/arthur/mrad_ws_2602_golf/build/description_2602_golf/share/description_2602_golf/hook/pythonpath_develop.sh'
+[9.845s] Level 1:colcon.colcon_core.environment:checking '/home/arthur/mrad_ws_2602_golf/install/description_2602_golf' for CMake module files
+[9.845s] Level 1:colcon.colcon_core.environment:checking '/home/arthur/mrad_ws_2602_golf/install/description_2602_golf' for CMake config files
+[9.846s] Level 1:colcon.colcon_core.environment:checking '/home/arthur/mrad_ws_2602_golf/install/description_2602_golf/lib'
+[9.846s] Level 1:colcon.colcon_core.environment:checking '/home/arthur/mrad_ws_2602_golf/install/description_2602_golf/bin'
+[9.846s] Level 1:colcon.colcon_core.environment:checking '/home/arthur/mrad_ws_2602_golf/install/description_2602_golf/lib/pkgconfig/description_2602_golf.pc'
+[9.846s] Level 1:colcon.colcon_core.environment:checking '/home/arthur/mrad_ws_2602_golf/install/description_2602_golf/lib/python3.12/site-packages'
+[9.846s] Level 1:colcon.colcon_core.shell:create_environment_hook('description_2602_golf', 'pythonpath')
+[9.846s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/arthur/mrad_ws_2602_golf/install/description_2602_golf/share/description_2602_golf/hook/pythonpath.ps1'
+[9.847s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/arthur/mrad_ws_2602_golf/install/description_2602_golf/share/description_2602_golf/hook/pythonpath.dsv'
+[9.847s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/arthur/mrad_ws_2602_golf/install/description_2602_golf/share/description_2602_golf/hook/pythonpath.sh'
+[9.848s] Level 1:colcon.colcon_core.environment:checking '/home/arthur/mrad_ws_2602_golf/install/description_2602_golf/bin'
+[9.848s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(description_2602_golf)
+[9.849s] INFO:colcon.colcon_core.shell:Creating package script '/home/arthur/mrad_ws_2602_golf/install/description_2602_golf/share/description_2602_golf/package.ps1'
+[9.849s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/arthur/mrad_ws_2602_golf/install/description_2602_golf/share/description_2602_golf/package.dsv'
+[9.850s] INFO:colcon.colcon_core.shell:Creating package script '/home/arthur/mrad_ws_2602_golf/install/description_2602_golf/share/description_2602_golf/package.sh'
+[9.851s] INFO:colcon.colcon_core.shell:Creating package script '/home/arthur/mrad_ws_2602_golf/install/description_2602_golf/share/description_2602_golf/package.bash'
+[9.852s] INFO:colcon.colcon_core.shell:Creating package script '/home/arthur/mrad_ws_2602_golf/install/description_2602_golf/share/description_2602_golf/package.zsh'
+[9.852s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/arthur/mrad_ws_2602_golf/install/description_2602_golf/share/colcon-core/packages/description_2602_golf)
+[9.852s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[9.853s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[9.853s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[9.853s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[9.912s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[9.912s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[9.912s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[9.934s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[9.934s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/arthur/mrad_ws_2602_golf/install/local_setup.ps1'
+[9.973s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/arthur/mrad_ws_2602_golf/install/_local_setup_util_ps1.py'
+[10.035s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/arthur/mrad_ws_2602_golf/install/setup.ps1'
+[10.094s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/arthur/mrad_ws_2602_golf/install/local_setup.sh'
+[10.112s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/arthur/mrad_ws_2602_golf/install/_local_setup_util_sh.py'
+[10.113s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/arthur/mrad_ws_2602_golf/install/setup.sh'
+[10.115s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/arthur/mrad_ws_2602_golf/install/local_setup.bash'
+[10.132s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/arthur/mrad_ws_2602_golf/install/setup.bash'
+[10.134s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/arthur/mrad_ws_2602_golf/install/local_setup.zsh'
+[10.136s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/arthur/mrad_ws_2602_golf/install/setup.zsh'

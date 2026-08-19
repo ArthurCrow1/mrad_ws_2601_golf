@@ -1,0 +1,16 @@
+running develop
+/usr/lib/python3/dist-packages/setuptools/command/easy_install.py:363: UserWarning: Unbuilt egg for pytest-repeat [unknown version] (/usr/lib/python3/dist-packages)
+  self.local_index = Environment(self.shadow_path + sys.path)
+running egg_info
+writing gazebo_2602_golf.egg-info/PKG-INFO
+writing dependency_links to gazebo_2602_golf.egg-info/dependency_links.txt
+writing requirements to gazebo_2602_golf.egg-info/requires.txt
+writing top-level names to gazebo_2602_golf.egg-info/top_level.txt
+reading manifest file 'gazebo_2602_golf.egg-info/SOURCES.txt'
+writing manifest file 'gazebo_2602_golf.egg-info/SOURCES.txt'
+running build_ext
+Creating /home/arthur/mrad_ws_2602_golf/install/gazebo_2602_golf/lib/python3.12/site-packages/gazebo-2602-golf.egg-link (link to .)
+
+Installed /home/arthur/mrad_ws_2602_golf/build/gazebo_2602_golf
+running symlink_data
+symbolically linking /home/arthur/mrad_ws_2602_golf/build/gazebo_2602_golf/worlds/ftg_track_2.sdf -> /home/arthur/mrad_ws_2602_golf/install/gazebo_2602_golf/share/gazebo_2602_golf/worlds

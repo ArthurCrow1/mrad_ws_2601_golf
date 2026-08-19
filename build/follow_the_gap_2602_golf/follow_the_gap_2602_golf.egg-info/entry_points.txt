@@ -1,0 +1,2 @@
+[console_scripts]
+ftg_node = follow_the_gap_2602_golf.ftg_node:main

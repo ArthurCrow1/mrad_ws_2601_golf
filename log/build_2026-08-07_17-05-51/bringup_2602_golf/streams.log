@@ -1,0 +1,22 @@
+[6.327s] Invoking command in '/home/arthur/mrad_ws_2602_golf/build/bringup_2602_golf': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/arthur/mrad_ws_2602_golf/build/bringup_2602_golf/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/arthur/mrad_ws_2602_golf/install/bringup_2602_golf/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/arthur/mrad_ws_2602_golf/build/bringup_2602_golf/build --no-deps symlink_data
+[6.710s] running develop
+[7.073s] /usr/lib/python3/dist-packages/setuptools/command/easy_install.py:363: UserWarning: Unbuilt egg for pytest-repeat [unknown version] (/usr/lib/python3/dist-packages)
+[7.073s]   self.local_index = Environment(self.shadow_path + sys.path)
+[7.118s] running egg_info
+[7.143s] writing bringup_2602_golf.egg-info/PKG-INFO
+[7.144s] writing dependency_links to bringup_2602_golf.egg-info/dependency_links.txt
+[7.144s] writing requirements to bringup_2602_golf.egg-info/requires.txt
+[7.145s] writing top-level names to bringup_2602_golf.egg-info/top_level.txt
+[7.196s] reading manifest file 'bringup_2602_golf.egg-info/SOURCES.txt'
+[7.197s] writing manifest file 'bringup_2602_golf.egg-info/SOURCES.txt'
+[7.223s] running build_ext
+[7.224s] Creating /home/arthur/mrad_ws_2602_golf/install/bringup_2602_golf/lib/python3.12/site-packages/bringup-2602-golf.egg-link (link to .)
+[7.226s] 
+[7.226s] Installed /home/arthur/mrad_ws_2602_golf/build/bringup_2602_golf
+[7.227s] running symlink_data
+[7.227s] symbolically linking /home/arthur/mrad_ws_2602_golf/build/bringup_2602_golf/launch/gz_lane_assist.launch.py -> /home/arthur/mrad_ws_2602_golf/install/bringup_2602_golf/share/bringup_2602_golf/launch
+[7.227s] symbolically linking /home/arthur/mrad_ws_2602_golf/build/bringup_2602_golf/config/my_controllers.yaml -> /home/arthur/mrad_ws_2602_golf/install/bringup_2602_golf/share/bringup_2602_golf/config
+[7.227s] symbolically linking /home/arthur/mrad_ws_2602_golf/build/bringup_2602_golf/config/gaz_ros2_ctl_use_sim.yaml -> /home/arthur/mrad_ws_2602_golf/install/bringup_2602_golf/share/bringup_2602_golf/config
+[7.227s] symbolically linking /home/arthur/mrad_ws_2602_golf/build/bringup_2602_golf/config/joystick.yaml -> /home/arthur/mrad_ws_2602_golf/install/bringup_2602_golf/share/bringup_2602_golf/config
+[7.228s] symbolically linking /home/arthur/mrad_ws_2602_golf/build/bringup_2602_golf/config/twist_mux.yaml -> /home/arthur/mrad_ws_2602_golf/install/bringup_2602_golf/share/bringup_2602_golf/config
+[7.277s] Invoked command in '/home/arthur/mrad_ws_2602_golf/build/bringup_2602_golf' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/arthur/mrad_ws_2602_golf/build/bringup_2602_golf/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/arthur/mrad_ws_2602_golf/install/bringup_2602_golf/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/arthur/mrad_ws_2602_golf/build/bringup_2602_golf/build --no-deps symlink_data

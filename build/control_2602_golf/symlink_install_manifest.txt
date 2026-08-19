@@ -1,0 +1,15 @@
+/home/arthur/mrad_ws_2602_golf/install/control_2602_golf/share/ament_index/resource_index/package_run_dependencies/control_2602_golf
+/home/arthur/mrad_ws_2602_golf/install/control_2602_golf/share/ament_index/resource_index/parent_prefix_path/control_2602_golf
+/home/arthur/mrad_ws_2602_golf/install/control_2602_golf/share/control_2602_golf/environment/ament_prefix_path.sh
+/home/arthur/mrad_ws_2602_golf/install/control_2602_golf/share/control_2602_golf/environment/ament_prefix_path.dsv
+/home/arthur/mrad_ws_2602_golf/install/control_2602_golf/share/control_2602_golf/environment/path.sh
+/home/arthur/mrad_ws_2602_golf/install/control_2602_golf/share/control_2602_golf/environment/path.dsv
+/home/arthur/mrad_ws_2602_golf/install/control_2602_golf/share/control_2602_golf/local_setup.bash
+/home/arthur/mrad_ws_2602_golf/install/control_2602_golf/share/control_2602_golf/local_setup.sh
+/home/arthur/mrad_ws_2602_golf/install/control_2602_golf/share/control_2602_golf/local_setup.zsh
+/home/arthur/mrad_ws_2602_golf/install/control_2602_golf/share/control_2602_golf/local_setup.dsv
+/home/arthur/mrad_ws_2602_golf/install/control_2602_golf/share/control_2602_golf/package.dsv
+/home/arthur/mrad_ws_2602_golf/install/control_2602_golf/share/ament_index/resource_index/packages/control_2602_golf
+/home/arthur/mrad_ws_2602_golf/install/control_2602_golf/share/control_2602_golf/cmake/control_2602_golfConfig.cmake
+/home/arthur/mrad_ws_2602_golf/install/control_2602_golf/share/control_2602_golf/cmake/control_2602_golfConfig-version.cmake
+/home/arthur/mrad_ws_2602_golf/install/control_2602_golf/share/control_2602_golf/package.xml

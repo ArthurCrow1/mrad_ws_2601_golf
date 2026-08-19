@@ -1,0 +1,44 @@
+[0.224s] Invoking command in '/home/arthur/mrad_ws_2602_golf/build/control_2602_golf': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/arthur/mrad_ws_2602_zulu/install/gazebo_2602_zulu:/home/arthur/mrad_ws_2602_zulu/install/description_2602_zulu:/home/arthur/mrad_ws_2602_zulu/install/bringup_2602_zulu:/home/arthur/remen_tuto/install/turtle_move_pkg_NNAA:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/arthur/mrad_ws_2602_golf/src/control_2602_golf -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/arthur/mrad_ws_2602_golf/install/control_2602_golf
+[1.992s] -- The C compiler identification is GNU 13.3.0
+[3.023s] -- The CXX compiler identification is GNU 13.3.0
+[3.064s] -- Detecting C compiler ABI info
+[3.201s] -- Detecting C compiler ABI info - done
+[3.210s] -- Check for working C compiler: /usr/bin/cc - skipped
+[3.210s] -- Detecting C compile features
+[3.210s] -- Detecting C compile features - done
+[3.218s] -- Detecting CXX compiler ABI info
+[3.290s] -- Detecting CXX compiler ABI info - done
+[3.299s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[3.299s] -- Detecting CXX compile features
+[3.300s] -- Detecting CXX compile features - done
+[3.829s] -- Found ament_cmake: 2.5.6 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[4.206s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+[4.319s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[4.587s] -- Found ament_lint_auto: 0.17.5 (/opt/ros/jazzy/share/ament_lint_auto/cmake)
+[4.766s] -- Added test 'lint_cmake' to check CMake code style
+[4.769s] -- Added test 'xmllint' to check XML markup files
+[4.771s] -- Configuring done (4.1s)
+[4.773s] -- Generating done (0.0s)
+[4.775s] -- Build files have been written to: /home/arthur/mrad_ws_2602_golf/build/control_2602_golf
+[4.779s] Invoked command in '/home/arthur/mrad_ws_2602_golf/build/control_2602_golf' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/arthur/mrad_ws_2602_zulu/install/gazebo_2602_zulu:/home/arthur/mrad_ws_2602_zulu/install/description_2602_zulu:/home/arthur/mrad_ws_2602_zulu/install/bringup_2602_zulu:/home/arthur/remen_tuto/install/turtle_move_pkg_NNAA:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/arthur/mrad_ws_2602_golf/src/control_2602_golf -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/arthur/mrad_ws_2602_golf/install/control_2602_golf
+[4.780s] Invoking command in '/home/arthur/mrad_ws_2602_golf/build/control_2602_golf': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/arthur/mrad_ws_2602_zulu/install/gazebo_2602_zulu:/home/arthur/mrad_ws_2602_zulu/install/description_2602_zulu:/home/arthur/mrad_ws_2602_zulu/install/bringup_2602_zulu:/home/arthur/remen_tuto/install/turtle_move_pkg_NNAA:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/arthur/mrad_ws_2602_golf/build/control_2602_golf -- -j8 -l8
+[4.810s] Invoked command in '/home/arthur/mrad_ws_2602_golf/build/control_2602_golf' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/arthur/mrad_ws_2602_zulu/install/gazebo_2602_zulu:/home/arthur/mrad_ws_2602_zulu/install/description_2602_zulu:/home/arthur/mrad_ws_2602_zulu/install/bringup_2602_zulu:/home/arthur/remen_tuto/install/turtle_move_pkg_NNAA:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/arthur/mrad_ws_2602_golf/build/control_2602_golf -- -j8 -l8
+[4.817s] Invoking command in '/home/arthur/mrad_ws_2602_golf/build/control_2602_golf': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/arthur/mrad_ws_2602_zulu/install/gazebo_2602_zulu:/home/arthur/mrad_ws_2602_zulu/install/description_2602_zulu:/home/arthur/mrad_ws_2602_zulu/install/bringup_2602_zulu:/home/arthur/remen_tuto/install/turtle_move_pkg_NNAA:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/arthur/mrad_ws_2602_golf/build/control_2602_golf
+[4.823s] -- Install configuration: ""
+[4.824s] -- Execute custom install script
+[4.824s] -- Symlinking: /home/arthur/mrad_ws_2602_golf/install/control_2602_golf/share/ament_index/resource_index/package_run_dependencies/control_2602_golf
+[4.831s] -- Symlinking: /home/arthur/mrad_ws_2602_golf/install/control_2602_golf/share/ament_index/resource_index/parent_prefix_path/control_2602_golf
+[4.838s] -- Symlinking: /home/arthur/mrad_ws_2602_golf/install/control_2602_golf/share/control_2602_golf/environment/ament_prefix_path.sh
+[4.844s] -- Symlinking: /home/arthur/mrad_ws_2602_golf/install/control_2602_golf/share/control_2602_golf/environment/ament_prefix_path.dsv
+[4.850s] -- Symlinking: /home/arthur/mrad_ws_2602_golf/install/control_2602_golf/share/control_2602_golf/environment/path.sh
+[4.857s] -- Symlinking: /home/arthur/mrad_ws_2602_golf/install/control_2602_golf/share/control_2602_golf/environment/path.dsv
+[4.863s] -- Symlinking: /home/arthur/mrad_ws_2602_golf/install/control_2602_golf/share/control_2602_golf/local_setup.bash
+[4.870s] -- Symlinking: /home/arthur/mrad_ws_2602_golf/install/control_2602_golf/share/control_2602_golf/local_setup.sh
+[4.877s] -- Symlinking: /home/arthur/mrad_ws_2602_golf/install/control_2602_golf/share/control_2602_golf/local_setup.zsh
+[4.883s] -- Symlinking: /home/arthur/mrad_ws_2602_golf/install/control_2602_golf/share/control_2602_golf/local_setup.dsv
+[4.890s] -- Symlinking: /home/arthur/mrad_ws_2602_golf/install/control_2602_golf/share/control_2602_golf/package.dsv
+[4.897s] -- Symlinking: /home/arthur/mrad_ws_2602_golf/install/control_2602_golf/share/ament_index/resource_index/packages/control_2602_golf
+[4.904s] -- Symlinking: /home/arthur/mrad_ws_2602_golf/install/control_2602_golf/share/control_2602_golf/cmake/control_2602_golfConfig.cmake
+[4.910s] -- Symlinking: /home/arthur/mrad_ws_2602_golf/install/control_2602_golf/share/control_2602_golf/cmake/control_2602_golfConfig-version.cmake
+[4.916s] -- Symlinking: /home/arthur/mrad_ws_2602_golf/install/control_2602_golf/share/control_2602_golf/package.xml
+[4.924s] Invoked command in '/home/arthur/mrad_ws_2602_golf/build/control_2602_golf' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/arthur/mrad_ws_2602_zulu/install/gazebo_2602_zulu:/home/arthur/mrad_ws_2602_zulu/install/description_2602_zulu:/home/arthur/mrad_ws_2602_zulu/install/bringup_2602_zulu:/home/arthur/remen_tuto/install/turtle_move_pkg_NNAA:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/arthur/mrad_ws_2602_golf/build/control_2602_golf

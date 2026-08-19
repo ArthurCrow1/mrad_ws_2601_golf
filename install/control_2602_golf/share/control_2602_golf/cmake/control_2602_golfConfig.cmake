@@ -1,0 +1,1 @@
+/home/arthur/mrad_ws_2602_golf/build/control_2602_golf/ament_cmake_core/control_2602_golfConfig.cmake

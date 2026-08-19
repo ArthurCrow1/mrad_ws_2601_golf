@@ -1,0 +1,132 @@
+<?xml version="1.0" ?>
+<sdf version="1.8">
+  <world name="wall_following_world">
+    
+    <physics name="1ms" type="ignored">
+      <max_step_size>0.001</max_step_size>
+      <real_time_factor>1.0</real_time_factor>
+    </physics>
+    <plugin filename="gz-sim-physics-system" name="gz::sim::systems::Physics"/>
+    <plugin filename="gz-sim-user-commands-system" name="gz::sim::systems::UserCommands"/>
+    <plugin filename="gz-sim-scene-broadcaster-system" name="gz::sim::systems::SceneBroadcaster"/>
+    <plugin filename="gz-sim-sensors-system" name="gz::sim::systems::Sensors">
+      <render_engine>ogre2</render_engine>
+    </plugin>
+    
+    <light type="directional" name="sun">
+      <cast_shadows>true</cast_shadows>
+      <pose>0 0 10 0 0 0</pose>
+      <diffuse>0.8 0.8 0.8 1</diffuse>
+      <specular>0.2 0.2 0.2 1</specular>
+      <direction>-0.5 0.1 -0.9</direction>
+    </light>
+
+    <!-- PISO BASE -->
+    <model name="ground_plane">
+      <static>true</static>
+      <link name="link">
+        <collision name="collision"><geometry><plane><normal>0 0 1</normal><size>100 100</size></plane></geometry></collision>
+        <visual name="visual">
+          <geometry><plane><normal>0 0 1</normal><size>100 100</size></plane></geometry>
+          <material><ambient>0.8 0.8 0.8 1</ambient><diffuse>0.8 0.8 0.8 1</diffuse></material>
+        </visual>
+      </link>
+    </model>
+
+    <!-- ========================================== -->
+    <!-- CIRCUITO OCTAGONAL (CÁLCULO EXACTO)        -->
+    <!-- ========================================== -->
+    <model name="wall_track">
+      <static>true</static>
+      
+      <!-- PAREDES EXTERIORES (Longitud exacta 6.0) -->
+      <link name="outer_north">
+        <pose>0 5 0.25 0 0 0</pose>
+        <visual name="v"><geometry><box><size>6.0 0.1 0.5</size></box></geometry><material><ambient>0.6 0.2 0.2 1</ambient></material></visual>
+        <collision name="c"><geometry><box><size>6.0 0.1 0.5</size></box></geometry></collision>
+      </link>
+      <link name="outer_south">
+        <pose>0 -5 0.25 0 0 0</pose>
+        <visual name="v"><geometry><box><size>6.0 0.1 0.5</size></box></geometry><material><ambient>0.6 0.2 0.2 1</ambient></material></visual>
+        <collision name="c"><geometry><box><size>6.0 0.1 0.5</size></box></geometry></collision>
+      </link>
+      <link name="outer_east">
+        <pose>5 0 0.25 0 0 1.5708</pose>
+        <visual name="v"><geometry><box><size>6.0 0.1 0.5</size></box></geometry><material><ambient>0.6 0.2 0.2 1</ambient></material></visual>
+        <collision name="c"><geometry><box><size>6.0 0.1 0.5</size></box></geometry></collision>
+      </link>
+      <link name="outer_west">
+        <pose>-5 0 0.25 0 0 1.5708</pose>
+        <visual name="v"><geometry><box><size>6.0 0.1 0.5</size></box></geometry><material><ambient>0.6 0.2 0.2 1</ambient></material></visual>
+        <collision name="c"><geometry><box><size>6.0 0.1 0.5</size></box></geometry></collision>
+      </link>
+      
+      <!-- Diagonales exteriores (Longitud exacta 2.9) -->
+      <link name="outer_ne">
+        <pose>4 4 0.25 0 0 -0.7854</pose>
+        <visual name="v"><geometry><box><size>2.9 0.1 0.5</size></box></geometry><material><ambient>0.6 0.2 0.2 1</ambient></material></visual>
+        <collision name="c"><geometry><box><size>2.9 0.1 0.5</size></box></geometry></collision>
+      </link>
+      <link name="outer_nw">
+        <pose>-4 4 0.25 0 0 0.7854</pose>
+        <visual name="v"><geometry><box><size>2.9 0.1 0.5</size></box></geometry><material><ambient>0.6 0.2 0.2 1</ambient></material></visual>
+        <collision name="c"><geometry><box><size>2.9 0.1 0.5</size></box></geometry></collision>
+      </link>
+      <link name="outer_se">
+        <pose>4 -4 0.25 0 0 0.7854</pose>
+        <visual name="v"><geometry><box><size>2.9 0.1 0.5</size></box></geometry><material><ambient>0.6 0.2 0.2 1</ambient></material></visual>
+        <collision name="c"><geometry><box><size>2.9 0.1 0.5</size></box></geometry></collision>
+      </link>
+      <link name="outer_sw">
+        <pose>-4 -4 0.25 0 0 -0.7854</pose>
+        <visual name="v"><geometry><box><size>2.9 0.1 0.5</size></box></geometry><material><ambient>0.6 0.2 0.2 1</ambient></material></visual>
+        <collision name="c"><geometry><box><size>2.9 0.1 0.5</size></box></geometry></collision>
+      </link>
+
+      <!-- PAREDES INTERIORES (Longitud exacta 3.1) -->
+      <link name="inner_north">
+        <pose>0 3.5 0.25 0 0 0</pose>
+        <visual name="v"><geometry><box><size>3.1 0.1 0.5</size></box></geometry><material><ambient>0.6 0.2 0.2 1</ambient></material></visual>
+        <collision name="c"><geometry><box><size>3.1 0.1 0.5</size></box></geometry></collision>
+      </link>
+      <link name="inner_south">
+        <pose>0 -3.5 0.25 0 0 0</pose>
+        <visual name="v"><geometry><box><size>3.1 0.1 0.5</size></box></geometry><material><ambient>0.6 0.2 0.2 1</ambient></material></visual>
+        <collision name="c"><geometry><box><size>3.1 0.1 0.5</size></box></geometry></collision>
+      </link>
+      <link name="inner_east">
+        <pose>3.5 0 0.25 0 0 1.5708</pose>
+        <visual name="v"><geometry><box><size>3.1 0.1 0.5</size></box></geometry><material><ambient>0.6 0.2 0.2 1</ambient></material></visual>
+        <collision name="c"><geometry><box><size>3.1 0.1 0.5</size></box></geometry></collision>
+      </link>
+      <link name="inner_west">
+        <pose>-3.5 0 0.25 0 0 1.5708</pose>
+        <visual name="v"><geometry><box><size>3.1 0.1 0.5</size></box></geometry><material><ambient>0.6 0.2 0.2 1</ambient></material></visual>
+        <collision name="c"><geometry><box><size>3.1 0.1 0.5</size></box></geometry></collision>
+      </link>
+      
+      <!-- Diagonales interiores (Longitud exacta 2.9) -->
+      <link name="inner_ne">
+        <pose>2.5 2.5 0.25 0 0 -0.7854</pose>
+        <visual name="v"><geometry><box><size>2.9 0.1 0.5</size></box></geometry><material><ambient>0.6 0.2 0.2 1</ambient></material></visual>
+        <collision name="c"><geometry><box><size>2.9 0.1 0.5</size></box></geometry></collision>
+      </link>
+      <link name="inner_nw">
+        <pose>-2.5 2.5 0.25 0 0 0.7854</pose>
+        <visual name="v"><geometry><box><size>2.9 0.1 0.5</size></box></geometry><material><ambient>0.6 0.2 0.2 1</ambient></material></visual>
+        <collision name="c"><geometry><box><size>2.9 0.1 0.5</size></box></geometry></collision>
+      </link>
+      <link name="inner_se">
+        <pose>2.5 -2.5 0.25 0 0 0.7854</pose>
+        <visual name="v"><geometry><box><size>2.9 0.1 0.5</size></box></geometry><material><ambient>0.6 0.2 0.2 1</ambient></material></visual>
+        <collision name="c"><geometry><box><size>2.9 0.1 0.5</size></box></geometry></collision>
+      </link>
+      <link name="inner_sw">
+        <pose>-2.5 -2.5 0.25 0 0 -0.7854</pose>
+        <visual name="v"><geometry><box><size>2.9 0.1 0.5</size></box></geometry><material><ambient>0.6 0.2 0.2 1</ambient></material></visual>
+        <collision name="c"><geometry><box><size>2.9 0.1 0.5</size></box></geometry></collision>
+      </link>
+
+    </model>
+  </world>
+</sdf>

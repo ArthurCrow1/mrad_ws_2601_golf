@@ -1,0 +1,20 @@
+[3.697s] Invoking command in '/home/arthur/mrad_ws_2602_golf/build/ttc_2602_golf': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/arthur/mrad_ws_2602_golf/build/ttc_2602_golf/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/arthur/mrad_ws_2602_golf/install/ttc_2602_golf/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/arthur/mrad_ws_2602_golf/build/ttc_2602_golf/build --no-deps symlink_data
+[4.432s] running develop
+[4.839s] /usr/lib/python3/dist-packages/setuptools/command/easy_install.py:363: UserWarning: Unbuilt egg for pytest-repeat [unknown version] (/usr/lib/python3/dist-packages)
+[4.839s]   self.local_index = Environment(self.shadow_path + sys.path)
+[4.894s] running egg_info
+[4.926s] writing ttc_2602_golf.egg-info/PKG-INFO
+[4.927s] writing dependency_links to ttc_2602_golf.egg-info/dependency_links.txt
+[4.927s] writing entry points to ttc_2602_golf.egg-info/entry_points.txt
+[4.927s] writing requirements to ttc_2602_golf.egg-info/requires.txt
+[4.927s] writing top-level names to ttc_2602_golf.egg-info/top_level.txt
+[4.991s] reading manifest file 'ttc_2602_golf.egg-info/SOURCES.txt'
+[4.992s] writing manifest file 'ttc_2602_golf.egg-info/SOURCES.txt'
+[5.025s] running build_ext
+[5.025s] Creating /home/arthur/mrad_ws_2602_golf/install/ttc_2602_golf/lib/python3.12/site-packages/ttc-2602-golf.egg-link (link to .)
+[5.026s] Installing lkp_node script to /home/arthur/mrad_ws_2602_golf/install/ttc_2602_golf/lib/ttc_2602_golf
+[5.026s] Installing ttc_node script to /home/arthur/mrad_ws_2602_golf/install/ttc_2602_golf/lib/ttc_2602_golf
+[5.027s] 
+[5.027s] Installed /home/arthur/mrad_ws_2602_golf/build/ttc_2602_golf
+[5.027s] running symlink_data
+[5.059s] Invoked command in '/home/arthur/mrad_ws_2602_golf/build/ttc_2602_golf' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/arthur/mrad_ws_2602_golf/build/ttc_2602_golf/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/arthur/mrad_ws_2602_golf/install/ttc_2602_golf/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/arthur/mrad_ws_2602_golf/build/ttc_2602_golf/build --no-deps symlink_data

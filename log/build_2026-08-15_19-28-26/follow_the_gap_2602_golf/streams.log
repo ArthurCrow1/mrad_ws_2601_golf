@@ -1,0 +1,19 @@
+[7.924s] Invoking command in '/home/arthur/mrad_ws_2602_golf/build/follow_the_gap_2602_golf': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/arthur/mrad_ws_2602_golf/build/follow_the_gap_2602_golf/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/arthur/mrad_ws_2602_golf/install/follow_the_gap_2602_golf/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/arthur/mrad_ws_2602_golf/build/follow_the_gap_2602_golf/build --no-deps symlink_data
+[8.612s] running develop
+[9.245s] /usr/lib/python3/dist-packages/setuptools/command/easy_install.py:363: UserWarning: Unbuilt egg for pytest-repeat [unknown version] (/usr/lib/python3/dist-packages)
+[9.250s]   self.local_index = Environment(self.shadow_path + sys.path)
+[9.314s] running egg_info
+[9.362s] writing follow_the_gap_2602_golf.egg-info/PKG-INFO
+[9.363s] writing dependency_links to follow_the_gap_2602_golf.egg-info/dependency_links.txt
+[9.363s] writing entry points to follow_the_gap_2602_golf.egg-info/entry_points.txt
+[9.363s] writing requirements to follow_the_gap_2602_golf.egg-info/requires.txt
+[9.364s] writing top-level names to follow_the_gap_2602_golf.egg-info/top_level.txt
+[9.461s] reading manifest file 'follow_the_gap_2602_golf.egg-info/SOURCES.txt'
+[9.463s] writing manifest file 'follow_the_gap_2602_golf.egg-info/SOURCES.txt'
+[9.507s] running build_ext
+[9.507s] Creating /home/arthur/mrad_ws_2602_golf/install/follow_the_gap_2602_golf/lib/python3.12/site-packages/follow-the-gap-2602-golf.egg-link (link to .)
+[9.508s] Installing ftg_node script to /home/arthur/mrad_ws_2602_golf/install/follow_the_gap_2602_golf/lib/follow_the_gap_2602_golf
+[9.509s] 
+[9.509s] Installed /home/arthur/mrad_ws_2602_golf/build/follow_the_gap_2602_golf
+[9.509s] running symlink_data
+[9.607s] Invoked command in '/home/arthur/mrad_ws_2602_golf/build/follow_the_gap_2602_golf' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/arthur/mrad_ws_2602_golf/build/follow_the_gap_2602_golf/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/arthur/mrad_ws_2602_golf/install/follow_the_gap_2602_golf/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/arthur/mrad_ws_2602_golf/build/follow_the_gap_2602_golf/build --no-deps symlink_data

@@ -1,0 +1,4 @@
+[console_scripts]
+control = wall_following_2602_golf.control:main
+dist_finder = wall_following_2602_golf.dist_finder:main
+ftw_jd = wall_following_2602_golf.ftw_jd:main

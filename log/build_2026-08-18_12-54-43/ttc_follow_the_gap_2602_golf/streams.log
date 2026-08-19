@@ -1,0 +1,20 @@
+[7.621s] Invoking command in '/home/arthur/mrad_ws_2602_golf/build/ttc_follow_the_gap_2602_golf': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/arthur/mrad_ws_2602_golf/build/ttc_follow_the_gap_2602_golf/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/arthur/mrad_ws_2602_golf/install/ttc_follow_the_gap_2602_golf/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/arthur/mrad_ws_2602_golf/build/ttc_follow_the_gap_2602_golf/build --no-deps symlink_data
+[8.143s] running develop
+[8.407s] /usr/lib/python3/dist-packages/setuptools/command/easy_install.py:363: UserWarning: Unbuilt egg for pytest-repeat [unknown version] (/usr/lib/python3/dist-packages)
+[8.408s]   self.local_index = Environment(self.shadow_path + sys.path)
+[8.453s] running egg_info
+[8.480s] writing ttc_follow_the_gap_2602_golf.egg-info/PKG-INFO
+[8.481s] writing dependency_links to ttc_follow_the_gap_2602_golf.egg-info/dependency_links.txt
+[8.481s] writing entry points to ttc_follow_the_gap_2602_golf.egg-info/entry_points.txt
+[8.481s] writing requirements to ttc_follow_the_gap_2602_golf.egg-info/requires.txt
+[8.482s] writing top-level names to ttc_follow_the_gap_2602_golf.egg-info/top_level.txt
+[8.535s] reading manifest file 'ttc_follow_the_gap_2602_golf.egg-info/SOURCES.txt'
+[8.536s] writing manifest file 'ttc_follow_the_gap_2602_golf.egg-info/SOURCES.txt'
+[8.566s] running build_ext
+[8.566s] Creating /home/arthur/mrad_ws_2602_golf/install/ttc_follow_the_gap_2602_golf/lib/python3.12/site-packages/ttc-follow-the-gap-2602-golf.egg-link (link to .)
+[8.567s] Installing ttc_gap_control script to /home/arthur/mrad_ws_2602_golf/install/ttc_follow_the_gap_2602_golf/lib/ttc_follow_the_gap_2602_golf
+[8.567s] Installing ttc_gap_finder script to /home/arthur/mrad_ws_2602_golf/install/ttc_follow_the_gap_2602_golf/lib/ttc_follow_the_gap_2602_golf
+[8.567s] 
+[8.567s] Installed /home/arthur/mrad_ws_2602_golf/build/ttc_follow_the_gap_2602_golf
+[8.568s] running symlink_data
+[8.609s] Invoked command in '/home/arthur/mrad_ws_2602_golf/build/ttc_follow_the_gap_2602_golf' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/arthur/mrad_ws_2602_golf/build/ttc_follow_the_gap_2602_golf/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/arthur/mrad_ws_2602_golf/install/ttc_follow_the_gap_2602_golf/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/arthur/mrad_ws_2602_golf/build/ttc_follow_the_gap_2602_golf/build --no-deps symlink_data

@@ -1,0 +1,17 @@
+[3.144s] Invoking command in '/home/arthur/mrad_ws_2602_golf/build/gazebo_2602_golf': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/arthur/mrad_ws_2602_golf/build/gazebo_2602_golf/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/arthur/mrad_ws_2602_golf/install/gazebo_2602_golf/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/arthur/mrad_ws_2602_golf/build/gazebo_2602_golf/build --no-deps symlink_data
+[3.700s] running develop
+[4.088s] /usr/lib/python3/dist-packages/setuptools/command/easy_install.py:363: UserWarning: Unbuilt egg for pytest-repeat [unknown version] (/usr/lib/python3/dist-packages)
+[4.088s]   self.local_index = Environment(self.shadow_path + sys.path)
+[4.170s] running egg_info
+[4.215s] writing gazebo_2602_golf.egg-info/PKG-INFO
+[4.215s] writing dependency_links to gazebo_2602_golf.egg-info/dependency_links.txt
+[4.216s] writing requirements to gazebo_2602_golf.egg-info/requires.txt
+[4.216s] writing top-level names to gazebo_2602_golf.egg-info/top_level.txt
+[4.306s] reading manifest file 'gazebo_2602_golf.egg-info/SOURCES.txt'
+[4.308s] writing manifest file 'gazebo_2602_golf.egg-info/SOURCES.txt'
+[4.354s] running build_ext
+[4.355s] Creating /home/arthur/mrad_ws_2602_golf/install/gazebo_2602_golf/lib/python3.12/site-packages/gazebo-2602-golf.egg-link (link to .)
+[4.355s] 
+[4.355s] Installed /home/arthur/mrad_ws_2602_golf/build/gazebo_2602_golf
+[4.355s] running symlink_data
+[4.408s] Invoked command in '/home/arthur/mrad_ws_2602_golf/build/gazebo_2602_golf' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/arthur/mrad_ws_2602_golf/build/gazebo_2602_golf/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/arthur/mrad_ws_2602_golf/install/gazebo_2602_golf/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/arthur/mrad_ws_2602_golf/build/gazebo_2602_golf/build --no-deps symlink_data

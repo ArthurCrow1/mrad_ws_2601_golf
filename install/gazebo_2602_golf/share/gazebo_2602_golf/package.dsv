@@ -1,0 +1,9 @@
+source;share/gazebo_2602_golf/hook/pythonpath.ps1
+source;share/gazebo_2602_golf/hook/pythonpath.dsv
+source;share/gazebo_2602_golf/hook/pythonpath.sh
+source;share/gazebo_2602_golf/hook/ament_prefix_path.ps1
+source;share/gazebo_2602_golf/hook/ament_prefix_path.dsv
+source;share/gazebo_2602_golf/hook/ament_prefix_path.sh
+source;../../build/gazebo_2602_golf/share/gazebo_2602_golf/hook/pythonpath_develop.ps1
+source;../../build/gazebo_2602_golf/share/gazebo_2602_golf/hook/pythonpath_develop.dsv
+source;../../build/gazebo_2602_golf/share/gazebo_2602_golf/hook/pythonpath_develop.sh

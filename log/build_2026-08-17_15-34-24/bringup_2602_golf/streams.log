@@ -1,0 +1,17 @@
+[7.534s] Invoking command in '/home/arthur/mrad_ws_2602_golf/build/bringup_2602_golf': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/arthur/mrad_ws_2602_golf/build/bringup_2602_golf/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/arthur/mrad_ws_2602_golf/install/bringup_2602_golf/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/arthur/mrad_ws_2602_golf/build/bringup_2602_golf/build --no-deps symlink_data
+[8.195s] running develop
+[8.543s] /usr/lib/python3/dist-packages/setuptools/command/easy_install.py:363: UserWarning: Unbuilt egg for pytest-repeat [unknown version] (/usr/lib/python3/dist-packages)
+[8.543s]   self.local_index = Environment(self.shadow_path + sys.path)
+[8.622s] running egg_info
+[8.666s] writing bringup_2602_golf.egg-info/PKG-INFO
+[8.666s] writing dependency_links to bringup_2602_golf.egg-info/dependency_links.txt
+[8.667s] writing requirements to bringup_2602_golf.egg-info/requires.txt
+[8.667s] writing top-level names to bringup_2602_golf.egg-info/top_level.txt
+[8.755s] reading manifest file 'bringup_2602_golf.egg-info/SOURCES.txt'
+[8.756s] writing manifest file 'bringup_2602_golf.egg-info/SOURCES.txt'
+[8.801s] running build_ext
+[8.802s] Creating /home/arthur/mrad_ws_2602_golf/install/bringup_2602_golf/lib/python3.12/site-packages/bringup-2602-golf.egg-link (link to .)
+[8.802s] 
+[8.802s] Installed /home/arthur/mrad_ws_2602_golf/build/bringup_2602_golf
+[8.802s] running symlink_data
+[8.876s] Invoked command in '/home/arthur/mrad_ws_2602_golf/build/bringup_2602_golf' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/arthur/mrad_ws_2602_golf/build/bringup_2602_golf/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/arthur/mrad_ws_2602_golf/install/bringup_2602_golf/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/arthur/mrad_ws_2602_golf/build/bringup_2602_golf/build --no-deps symlink_data

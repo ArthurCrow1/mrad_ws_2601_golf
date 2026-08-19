@@ -1,0 +1,1 @@
+/home/arthur/mrad_ws_2602_golf/src/bringup_2602_golf/launch/gz_spawn.launch.py
