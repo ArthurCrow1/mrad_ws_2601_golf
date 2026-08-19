@@ -1,9 +1,0 @@
-/home/arthur/mrad_ws_2602_golf/build/control_2602_golf/CMakeFiles/uninstall.dir
-/home/arthur/mrad_ws_2602_golf/build/control_2602_golf/CMakeFiles/control_2602_golf_uninstall.dir
-/home/arthur/mrad_ws_2602_golf/build/control_2602_golf/CMakeFiles/test.dir
-/home/arthur/mrad_ws_2602_golf/build/control_2602_golf/CMakeFiles/edit_cache.dir
-/home/arthur/mrad_ws_2602_golf/build/control_2602_golf/CMakeFiles/rebuild_cache.dir
-/home/arthur/mrad_ws_2602_golf/build/control_2602_golf/CMakeFiles/list_install_components.dir
-/home/arthur/mrad_ws_2602_golf/build/control_2602_golf/CMakeFiles/install.dir
-/home/arthur/mrad_ws_2602_golf/build/control_2602_golf/CMakeFiles/install/local.dir
-/home/arthur/mrad_ws_2602_golf/build/control_2602_golf/CMakeFiles/install/strip.dir

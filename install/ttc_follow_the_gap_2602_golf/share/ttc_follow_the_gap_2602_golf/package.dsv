@@ -1,9 +1,0 @@
-source;share/ttc_follow_the_gap_2602_golf/hook/pythonpath.ps1
-source;share/ttc_follow_the_gap_2602_golf/hook/pythonpath.dsv
-source;share/ttc_follow_the_gap_2602_golf/hook/pythonpath.sh
-source;share/ttc_follow_the_gap_2602_golf/hook/ament_prefix_path.ps1
-source;share/ttc_follow_the_gap_2602_golf/hook/ament_prefix_path.dsv
-source;share/ttc_follow_the_gap_2602_golf/hook/ament_prefix_path.sh
-source;../../build/ttc_follow_the_gap_2602_golf/share/ttc_follow_the_gap_2602_golf/hook/pythonpath_develop.ps1
-source;../../build/ttc_follow_the_gap_2602_golf/share/ttc_follow_the_gap_2602_golf/hook/pythonpath_develop.dsv
-source;../../build/ttc_follow_the_gap_2602_golf/share/ttc_follow_the_gap_2602_golf/hook/pythonpath_develop.sh

@@ -1,1 +1,0 @@
-/home/arthur/mrad_ws_2602_golf/src/follow_the_gap_2602_golf/launch/ftg.launch.py

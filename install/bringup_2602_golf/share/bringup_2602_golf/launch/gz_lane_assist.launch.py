@@ -1,1 +1,0 @@
-/home/arthur/mrad_ws_2602_golf/build/bringup_2602_golf/launch/gz_lane_assist.launch.py

@@ -1,1 +1,0 @@
-/home/arthur/mrad_ws_2602_golf/src/ttc_follow_the_gap_2602_golf/launch/ttc_ftg_word.launch.py

@@ -1,3 +1,0 @@
-[console_scripts]
-lkp_node = ttc_2602_golf.lkp_node:main
-ttc_node = ttc_2602_golf.ttc_node:main

@@ -1,9 +1,0 @@
-source;share/wall_following_2602_golf/hook/pythonpath.ps1
-source;share/wall_following_2602_golf/hook/pythonpath.dsv
-source;share/wall_following_2602_golf/hook/pythonpath.sh
-source;share/wall_following_2602_golf/hook/ament_prefix_path.ps1
-source;share/wall_following_2602_golf/hook/ament_prefix_path.dsv
-source;share/wall_following_2602_golf/hook/ament_prefix_path.sh
-source;../../build/wall_following_2602_golf/share/wall_following_2602_golf/hook/pythonpath_develop.ps1
-source;../../build/wall_following_2602_golf/share/wall_following_2602_golf/hook/pythonpath_develop.dsv
-source;../../build/wall_following_2602_golf/share/wall_following_2602_golf/hook/pythonpath_develop.sh
