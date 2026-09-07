@@ -12,6 +12,9 @@
     <!-- ros2_control -->
     <xacro:include filename="ros2_control.xacro"/>
 
+    <!-- IMU -->
+    <xacro:include filename="imu.xacro"/>
+
     <!-- CAMERA -->
     <xacro:include filename="camera.xacro"/>
     

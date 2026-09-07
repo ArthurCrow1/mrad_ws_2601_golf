@@ -1,8 +1,9 @@
-from setuptools import find_packages, setup
 import os
 from glob import glob
+from setuptools import find_packages, setup
 
-package_name = 'gazebo_2602_golf'
+
+package_name = 'ekf_2602_golf'
 
 setup(
     name=package_name,
@@ -12,9 +13,8 @@ setup(
         ('share/ament_index/resource_index/packages',
             ['resource/' + package_name]),
         ('share/' + package_name, ['package.xml']),
-        (os.path.join('share', package_name,'worlds'), glob('worlds/*.*')),
+        (os.path.join('share', package_name,'launch'), glob('launch/*.*')),
         (os.path.join('share', package_name,'config'), glob('config/*.*')),
-        (os.path.join('share', package_name,'maps'), glob('maps/*.*')),
     ],
     install_requires=['setuptools'],
     zip_safe=True,
@@ -29,6 +29,7 @@ setup(
     },
     entry_points={
         'console_scripts': [
+            'ekf_node = ekf_2602_golf.ekf_node:main',
         ],
     },
 )

@@ -143,7 +143,7 @@ def generate_launch_description():
         ),
         DeclareLaunchArgument(
             "world",
-            default_value=os.path.join(get_package_share_directory(gazebo_pkg_name), "worlds", "exam_1.sdf"),#exam_1_2.sdf
+            default_value=os.path.join(get_package_share_directory(gazebo_pkg_name), "worlds", "exam_1_2.sdf"),#exam_1_2.sdf
             description="Full path to world SDF file",
         ),
 
