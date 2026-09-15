@@ -51,7 +51,9 @@ def generate_launch_description():
         arguments=[
             "-name", "diffbot",
             "-topic", "robot_description",
-            "-x", "-2.0", "-y", "0.0", "-z", "0.5",
+            "-x", "-15.0", "-y", "-3.0", "-z", "0.5", '-Y', '1.5708'
+            #-2.0,0,0.5 Mapa de mapping
+            #
         ],
     )
 
@@ -116,7 +118,7 @@ def generate_launch_description():
         ),
         DeclareLaunchArgument(
             "world",
-            default_value=os.path.join(get_package_share_directory(gazebo_pkg_name), "worlds", "walls_world2.sdf"),
+            default_value=os.path.join(get_package_share_directory(gazebo_pkg_name), "worlds", "exam_1_2.sdf"),
             description="Full path to world SDF file",
         ),
         rsp,

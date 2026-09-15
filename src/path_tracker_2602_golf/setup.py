@@ -26,6 +26,7 @@ setup(
         'console_scripts': [
             'pure_pursuit_pt_2602_golf = path_tracker_2602_golf.pure_pursuit_pt_2602_golf:main',
             'mpc_pt_2602_golf = path_tracker_2602_golf.mpc_pt_2602_golf:main',
+            'csv_path_player_golf = path_tracker_2602_golf.csv_path_player_golf:main',
         ],
     },
 )

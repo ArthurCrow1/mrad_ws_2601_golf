@@ -29,6 +29,7 @@ setup(
         'console_scripts': [
             'dijkstra_pp_2602_golf = path_planner_2602_golf.dijkstra_pp_2602_golf:main',
             'prm_pp_2602_golf = path_planner_2602_golf.prm_pp_2602_golf:main',
+            'race_manager_golf = path_planner_2602_golf.race_manager_golf:main',
         ],
     },
 )

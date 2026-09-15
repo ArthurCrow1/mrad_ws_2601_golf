@@ -19,13 +19,15 @@ from rclpy.qos import QoSProfile, ReliabilityPolicy, DurabilityPolicy
 
 from nav_msgs.msg import OccupancyGrid, Path
 from geometry_msgs.msg import PoseStamped
-import tf2_ros
+#import tf2_ros
 
 import heapq
 from geometry_msgs.msg import Quaternion
 
 from visualization_msgs.msg import Marker, MarkerArray
 from geometry_msgs.msg import Point
+
+from nav_msgs.srv import GetPlan
 
 def yaw_to_quaternion(yaw: float) -> Quaternion:
     q = Quaternion()
@@ -77,8 +79,11 @@ class PRMNode(Node):
         goal_topic = self.get_parameter('goal_topic').get_parameter_value().string_value
         path_topic = self.get_parameter('path_topic').get_parameter_value().string_value
         
-        self.goal_sub = self.create_subscription(PoseStamped, goal_topic, self.goal_cb, 10)
+        #self.goal_sub = self.create_subscription(PoseStamped, goal_topic, self.goal_cb, 10)
         self.path_pub = self.create_publisher(Path, path_topic, 10)
+
+        self.srv = self.create_service(GetPlan, 'get_prm_plan', self.plan_service_cb)
+        self.get_logger().info('PRM listo. Esperando coordenadas en /get_prm_plan')
 
         qos_marker = QoSProfile(
             depth=1,
@@ -87,8 +92,8 @@ class PRMNode(Node):
         )
         self.graph_pub = self.create_publisher(MarkerArray, '/prm_roadmap', qos_marker)
         
-        self.tf_buffer = tf2_ros.Buffer()
-        self.tf_listener = tf2_ros.TransformListener(self.tf_buffer, self)
+        #self.tf_buffer = tf2_ros.Buffer()
+        #self.tf_listener = tf2_ros.TransformListener(self.tf_buffer, self)
 
     # ---------------- FASE 1: PROCESAMIENTO DEL MAPA ----------------
 
@@ -111,6 +116,7 @@ class PRMNode(Node):
 
         # Inflado usando Brushfire (Reutilizado de tu Dijkstra)
         dist_cells = self.compute_distance_to_obstacles(obstacles)
+        #self.dist_cells = self.compute_distance_to_obstacles(obstacles)
         inflate_radius = float(self.get_parameter('inflate_radius').get_parameter_value().double_value)
         if inflate_radius > 1e-6:
             inflation_cells = int(math.ceil(inflate_radius / res))
@@ -252,45 +258,84 @@ class PRMNode(Node):
         return True
     # ---------------- FASE 3: CONSULTA Y BÚSQUEDA (QUERY PHASE) ----------------
 
-    def goal_cb(self, goal_msg: PoseStamped):
+    # def goal_cb(self, goal_msg: PoseStamped):
+    #     if not self.prm_nodes_world:
+    #         self.get_logger().warn('Grafo PRM no está listo aún.')
+    #         return
+
+    #     global_frame = self.get_parameter('global_frame').get_parameter_value().string_value
+    #     base_frame = self.get_parameter('base_frame').get_parameter_value().string_value
+
+    #     # 1. Obtener la posición del Start (Robot) usando TF
+    #     try:
+    #         trans = self.tf_buffer.lookup_transform(global_frame, base_frame, rclpy.time.Time(), timeout=rclpy.duration.Duration(seconds=0.5))
+    #         start_x = trans.transform.translation.x
+    #         start_y = trans.transform.translation.y
+    #     except Exception as e:
+    #         self.get_logger().error(f'No se pudo obtener TF del robot: {e}')
+    #         return
+
+    #     goal_x = goal_msg.pose.position.x
+    #     goal_y = goal_msg.pose.position.y
+
+    #     self.get_logger().info(f'Buscando ruta PRM hacia ({goal_x:.2f}, {goal_y:.2f})')
+
+    #     # 2. Conectar Start y Goal al grafo
+    #     start_node_idx = self.connect_to_graph(start_x, start_y)
+    #     goal_node_idx = self.connect_to_graph(goal_x, goal_y)
+
+    #     if start_node_idx is None or goal_node_idx is None:
+    #         self.get_logger().warn('Imposible conectar Start/Goal al PRM. ¿Estás dentro de un obstáculo?')
+    #         return
+
+    #     # 3. Correr Dijkstra sobre el Grafo PRM
+    #     path_indices = self.dijkstra_on_graph(start_node_idx, goal_node_idx)
+
+    #     if not path_indices:
+    #         self.get_logger().warn('No hay ruta posible en este roadmap.')
+    #         return
+
+    #     # 4. Publicar la ruta final
+    #     self.publish_path(path_indices, (start_x, start_y), (goal_x, goal_y), global_frame)
+
+    def plan_service_cb(self, request, response):
         if not self.prm_nodes_world:
             self.get_logger().warn('Grafo PRM no está listo aún.')
-            return
+            return response
 
-        global_frame = self.get_parameter('global_frame').get_parameter_value().string_value
-        base_frame = self.get_parameter('base_frame').get_parameter_value().string_value
+        # 1. Extraemos explícitamente el Inicio y el Fin de la petición del Manager
+        start_x = request.start.pose.position.x
+        start_y = request.start.pose.position.y
+        goal_x = request.goal.pose.position.x
+        goal_y = request.goal.pose.position.y
 
-        # 1. Obtener la posición del Start (Robot) usando TF
-        try:
-            trans = self.tf_buffer.lookup_transform(global_frame, base_frame, rclpy.time.Time(), timeout=rclpy.duration.Duration(seconds=0.5))
-            start_x = trans.transform.translation.x
-            start_y = trans.transform.translation.y
-        except Exception as e:
-            self.get_logger().error(f'No se pudo obtener TF del robot: {e}')
-            return
+        self.get_logger().info(f'Calculando tramo: ({start_x:.2f}, {start_y:.2f}) -> ({goal_x:.2f}, {goal_y:.2f})')
 
-        goal_x = goal_msg.pose.position.x
-        goal_y = goal_msg.pose.position.y
-
-        self.get_logger().info(f'Buscando ruta PRM hacia ({goal_x:.2f}, {goal_y:.2f})')
-
-        # 2. Conectar Start y Goal al grafo
+        # 2. Conectar al grafo
         start_node_idx = self.connect_to_graph(start_x, start_y)
         goal_node_idx = self.connect_to_graph(goal_x, goal_y)
 
         if start_node_idx is None or goal_node_idx is None:
-            self.get_logger().warn('Imposible conectar Start/Goal al PRM. ¿Estás dentro de un obstáculo?')
-            return
+            self.get_logger().warn('Imposible conectar Start/Goal al PRM.')
+            return response
 
-        # 3. Correr Dijkstra sobre el Grafo PRM
+        # 3. Ejecutar Dijkstra
         path_indices = self.dijkstra_on_graph(start_node_idx, goal_node_idx)
 
         if not path_indices:
-            self.get_logger().warn('No hay ruta posible en este roadmap.')
-            return
+            self.get_logger().warn('No hay ruta posible para este tramo.')
+            return response
 
-        # 4. Publicar la ruta final
-        self.publish_path(path_indices, (start_x, start_y), (goal_x, goal_y), global_frame)
+        # 4. Construir la ruta y empaquetarla en la respuesta
+        global_frame = self.get_parameter('global_frame').get_parameter_value().string_value
+        path_msg = self.create_path_msg(path_indices, (start_x, start_y), (goal_x, goal_y), global_frame)
+        
+        # Seguimos publicando en el tópico para que puedas ver el proceso en RViz2
+        self.path_pub.publish(path_msg) 
+        
+        # Devolvemos la ruta al Race Manager
+        response.plan = path_msg
+        return response
 
     def connect_to_graph(self, x: float, y: float) -> Optional[int]:
         
@@ -352,7 +397,7 @@ class PRMNode(Node):
         path.reverse()
         return path
 
-    def publish_path(self, path_indices: List[int], start_pt: Tuple[float, float], goal_pt: Tuple[float, float], frame_id: str):
+    def create_path_msg(self, path_indices: List[int], start_pt: Tuple[float, float], goal_pt: Tuple[float, float], frame_id: str):
         
         path_msg = Path()
         path_msg.header.frame_id = frame_id
@@ -375,8 +420,9 @@ class PRMNode(Node):
             pose.pose.orientation = yaw_to_quaternion(last_yaw)
             path_msg.poses.append(pose)
 
-        self.path_pub.publish(path_msg)
-        self.get_logger().info(f'Ruta enviada al Tracker: {len(path_msg.poses)} waypoints.')
+        #self.path_pub.publish(path_msg)
+        #self.get_logger().info(f'Ruta enviada al Tracker: {len(path_msg.poses)} waypoints.')
+        return path_msg
 
     # ---------------- FASE 4: VISUALIZACIÓN DEL GRAFO ----------------
 

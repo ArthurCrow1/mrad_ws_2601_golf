@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 import numpy as np
 import math
+import warnings
 from scipy.optimize import minimize
 
 import rclpy
@@ -9,7 +10,9 @@ from geometry_msgs.msg import TwistStamped, PoseStamped
 from nav_msgs.msg import Path
 import tf2_ros
 
-# ================= FASE 1: FÍSICA =================
+#warnings.filterwarnings("ignore", message="Values in x were outside bounds")
+
+# ================= FASE 1: FISICA =================
 class DifferentialDriveKinematics:
     def __init__(self, dt: float):
         self.dt = dt
@@ -37,12 +40,13 @@ class DifferentialDriveKinematics:
 
 # ================= FASES 2 y 3: EL MPC =================
 class MPCController:
-    def __init__(self, dt: float, N: int, v_ref: float, weights: list, bounds: dict):
+    def __init__(self, dt: float, N: int, v_ref: float, weights: list, bounds: dict, w_jerk: float):
         self.kinematics = DifferentialDriveKinematics(dt)
         self.N = N            
         self.v_ref = v_ref    
         
         self.W1, self.W2, self.W3, self.W4 = weights
+        self.w_jerk = w_jerk # Nuevo peso para penalizar volantazos
         self.v_min, self.v_max = bounds['v']
         self.w_min, self.w_max = bounds['w']
         self.bounds_seq = [(self.v_min, self.v_max), (self.w_min, self.w_max)] * self.N
@@ -61,30 +65,45 @@ class MPCController:
         
         v_extended = np.insert(v, 0, prev_control[0])
         w_extended = np.insert(w, 0, prev_control[1])
+        
+        # J2 mantiene la suavidad general, J_jerk castiga especificamente el cambio en el angulo (delta w)
         J2 = np.sum(np.diff(v_extended)**2 + np.diff(w_extended)**2)
+        J_jerk = np.sum(np.diff(w_extended)**2)
         
         J3 = np.sum(w**2)
         J4 = np.sum((v - self.v_ref)**2)
         
-        return (self.W1 * J1) + (self.W2 * J2) + (self.W3 * J3) + (self.W4 * J4)
+        return (self.W1 * J1) + (self.W2 * J2) + (self.W3 * J3) + (self.W4 * J4) + (self.w_jerk * J_jerk)
 
     def solve_mpc(self, initial_state, reference_trajectory, prev_control):
         initial_guess = np.tile(prev_control, self.N) 
         options = {'maxiter': 50, 'ftol': 1e-3}
         
-        result = minimize(
-            fun=self.mpc_cost_function,
-            x0=initial_guess,
-            args=(initial_state, reference_trajectory, prev_control),
-            method='SLSQP',
-            bounds=self.bounds_seq,
-            options=options
-        )
-        
-        optimal_controls = result.x.reshape((self.N, 2))
-        v_est, w_est = optimal_controls[0]
-        
-        return np.array([v_est, w_est]), optimal_controls
+        try:
+            result = minimize(
+                fun=self.mpc_cost_function,
+                x0=initial_guess,
+                args=(initial_state, reference_trajectory, prev_control),
+                method='SLSQP',
+                bounds=self.bounds_seq,
+                options=options
+            )
+            
+            # Validacion de seguridad (Red de rescate contra NaNs y colapsos)
+            if not result.success or np.isnan(result.x[0]) or np.isnan(result.x[1]):
+                print(f"[ALERTA MPC] Solver fallo. Exito: {result.success} | Motivo: {result.message}")
+                safe_u = prev_control * 0.8 # Frena progresivamente un 20%
+                return safe_u, np.tile(safe_u, (self.N, 1))
+            
+            optimal_controls = result.x.reshape((self.N, 2))
+            v_est, w_est = optimal_controls[0]
+            
+            return np.array([v_est, w_est]), optimal_controls
+            
+        except Exception:
+            # Fallo critico de la libreria
+            safe_u = np.array([0.0, 0.0])
+            return safe_u, np.tile(safe_u, (self.N, 1))
 
 # ================= FASE 4: NODO ROS 2 =================
 class MPCNode(Node):
@@ -102,6 +121,9 @@ class MPCNode(Node):
         
         self.declare_parameter('v_max', 1.0)
         self.declare_parameter('w_max', 1.5)
+
+        self.declare_parameter('w_jerk', 50.0)
+        self.w_jerk = self.get_parameter('w_jerk').value
         
         N = self.get_parameter('N').value
         dt = self.get_parameter('dt').value
@@ -117,7 +139,8 @@ class MPCNode(Node):
             'w': (-self.get_parameter('w_max').value, self.get_parameter('w_max').value)
         }
         
-        self.mpc = MPCController(dt, N, v_ref, weights, bounds)
+        # Pasamos el parametro w_jerk a la clase controladora
+        self.mpc = MPCController(dt, N, v_ref, weights, bounds, self.w_jerk)
         
         self.path_sub = self.create_subscription(Path, '/planned_path', self.path_cb, 10)
         self.cmd_pub = self.create_publisher(TwistStamped, '/cmd_vel_nav', 10)
@@ -129,12 +152,17 @@ class MPCNode(Node):
         
         self.global_path = []
         self.prev_control = np.array([0.0, 0.0]) 
+
+        # Para carrera
+        self.current_target_idx = 0 # Recuerda por que indice de la ruta va
         
         self.timer = self.create_timer(dt, self.control_loop)
         self.get_logger().info("Controlador MPC inicializado y esperando ruta...")
 
     def path_cb(self, msg: Path):
         self.global_path = [(p.pose.position.x, p.pose.position.y) for p in msg.poses]
+        # Para carrera
+        self.current_target_idx = 0  # Reiniciar el indice al recibir una pista nueva
 
     def get_robot_pose(self):
         try:
@@ -153,18 +181,24 @@ class MPCNode(Node):
 
     def extract_local_reference(self, robot_state):
         if not self.global_path:
-            return None
-            
-        rx, ry = robot_state[0], robot_state[1]
-        
-        distances = [math.hypot(px - rx, py - ry) for px, py in self.global_path]
-        closest_idx = np.argmin(distances)
-        
+            return None    
+        rx, ry = robot_state[0], robot_state[1] 
+        # 1. Definir que tan lejos miramos hacia adelante (Ventana de 30 indices)
+        search_window = 30
+        max_idx = min(self.current_target_idx + search_window, len(self.global_path))
+        # 2. Recortar solo ese pedazo de la ruta
+        window_path = self.global_path[self.current_target_idx:max_idx]
+        # 3. Buscar el punto mas cercano SOLO dentro de esta pequena ventana
+        distances = [math.hypot(px - rx, py - ry) for px, py in window_path]
+        local_closest_idx = np.argmin(distances)
+        # 4. Actualizar el indice global real para que el carro avance en la lista
+        self.current_target_idx += local_closest_idx
+        # 5. Extraer los N puntos para la prediccion del MPC a partir del indice actual
         N = self.get_parameter('N').value
         local_ref = []
         
         for i in range(N):
-            idx = min(closest_idx + i, len(self.global_path) - 1)
+            idx = min(self.current_target_idx + i, len(self.global_path) - 1)
             local_ref.append(self.global_path[idx])
             
         return np.array(local_ref)
@@ -179,11 +213,12 @@ class MPCNode(Node):
             
         ref_trajectory = self.extract_local_reference(robot_state)
         
-        distances = [math.hypot(px - robot_state[0], py - robot_state[1]) for px, py in self.global_path]
-        if distances[-1] < 0.3: 
+        dist_to_final_goal = math.hypot(self.global_path[-1][0] - robot_state[0], self.global_path[-1][1] - robot_state[1])
+        # Frena si esta a menos de 30 cm de la meta final, PERO solo si ya proceso casi toda la pista
+        if dist_to_final_goal < 0.3 and self.current_target_idx >= len(self.global_path) - self.get_parameter('N').value - 10: 
             self.stop_robot()
             self.global_path = []
-            self.get_logger().info("¡Meta alcanzada (MPC)!")
+            self.get_logger().info("Carrera finalizada (MPC).")
             return
 
         optimal_u, optimal_controls = self.mpc.solve_mpc(robot_state, ref_trajectory, self.prev_control)

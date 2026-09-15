@@ -45,7 +45,7 @@ def generate_launch_description():
             'use_lifecycle_manager': use_lifecycle_manager,
             'use_sim_time': use_sim_time,
             'mode': 'localization',
-            'map_file_name': '/home/arthur/mrad_ws_2602_golf/src/gazebo_2602_golf/maps/mapa_1',
+            'map_file_name': '/home/arthur/mrad_ws_2602_golf/src/gazebo_2602_golf/maps/exam_2_2',
             'map_start_pose': [0.0, 0.0, 0.0],
             'map_frame': 'map',
             'odom_frame': 'odom',
