@@ -5,6 +5,7 @@ from nav_msgs.msg import Path
 from geometry_msgs.msg import PoseStamped
 import csv
 import os
+import math
 
 class CsvPathPlayer(Node):
     def __init__(self):
@@ -35,15 +36,31 @@ class CsvPathPlayer(Node):
         try:
             with open(csv_file_path, mode='r') as file:
                 reader = csv.DictReader(file)
+                last_x = None
+                last_y = None
+                
                 for row in reader:
+                    curr_x = float(row['x'])
+                    curr_y = float(row['y'])
+                    
+                    # Filtro anti-duplicados:
+                    # Si el punto actual esta a menos de 2 cm del anterior, se descarta
+                    if last_x is not None and last_y is not None:
+                        dist = math.hypot(curr_x - last_x, curr_y - last_y)
+                        if dist < 0.02:
+                            continue  # Salta el punto repetido y no lo agrega
+                    
                     p = PoseStamped()
                     p.header.frame_id = 'map'
-                    p.pose.position.x = float(row['x'])
-                    p.pose.position.y = float(row['y'])
+                    p.pose.position.x = curr_x
+                    p.pose.position.y = curr_y
                     p.pose.orientation.w = 1.0 
                     self.path_msg.poses.append(p)
                     
-            self.get_logger().info(f"Memoria CSV cargada exitosamente: {len(self.path_msg.poses)} puntos listos.")
+                    last_x = curr_x
+                    last_y = curr_y
+                    
+            self.get_logger().info(f"Memoria CSV cargada y filtrada: {len(self.path_msg.poses)} puntos validos.")
             
         except Exception as e:
             self.get_logger().error(f"Error leyendo el CSV: {e}")

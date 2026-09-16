@@ -1,4 +1,6 @@
 from setuptools import find_packages, setup
+import os
+from glob import glob
 
 package_name = 'path_tracker_2602_golf'
 
@@ -10,6 +12,10 @@ setup(
         ('share/ament_index/resource_index/packages',
             ['resource/' + package_name]),
         ('share/' + package_name, ['package.xml']),
+
+        (os.path.join('share', package_name, 'launch'), glob('launch/*.py')),
+        
+        (os.path.join('share', package_name, 'config'), glob('config/*.yaml')),
     ],
     install_requires=['setuptools'],
     zip_safe=True,
@@ -27,6 +33,7 @@ setup(
             'pure_pursuit_pt_2602_golf = path_tracker_2602_golf.pure_pursuit_pt_2602_golf:main',
             'mpc_pt_2602_golf = path_tracker_2602_golf.mpc_pt_2602_golf:main',
             'csv_path_player_golf = path_tracker_2602_golf.csv_path_player_golf:main',
+            'csv_to_nav2_client = path_tracker_2602_golf.csv_to_nav2_client:main'
         ],
     },
 )

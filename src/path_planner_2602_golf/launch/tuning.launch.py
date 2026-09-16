@@ -18,13 +18,12 @@ def generate_launch_description():
                 'N': 7,                 # Horizonte de prediccion
                 'dt': 0.05,              # 20 Hz
                 'v_ref': 0.5,            # Velocidad crucero
-                'w_pos': 20.0,           # W1: Prioridad de ruta
-                'w_smooth': 0.1,         # W2: Suavidad
-                'w_straight': 1.0,       # W3: Evitar zig-zag
+                'w_pos': 25.0,           # W1: Prioridad de ruta
+                'w_smooth': 1.0,         # W2: Suavidad
+                'w_straight': 1.5,       # W3: Evitar zig-zag
                 'w_vel': 0.2,            # W4: Mantener velocidad
-                'v_max': 1.0,            # Límite motor lineal
-                'w_max': 5.0,            # Límite motor angular      
-                'w_jerk': 10.0,         # NUEVO: Peso inmenso para prohibir volantazos   
+                'v_max': 2.0,            # Límite motor lineal
+                'w_max': 4.0,            # Límite motor angular      
             }]
         ),
     ])

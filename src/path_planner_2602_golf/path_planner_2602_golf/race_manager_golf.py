@@ -142,7 +142,7 @@ class RaceManagerNode(Node):
         # Se guarda en la raiz del workspace para encontrarlo facil
         # /home/arthur/mrad_ws_2602_golf/src/path_planner_2602_golf/csv
         home_dir = os.path.expanduser('~')
-        csv_file_path = os.path.join(home_dir, 'mrad_ws_2602_golf', 'src', 'path_planner_2602_golf', 'csv', 'track_2.csv')
+        csv_file_path = os.path.join(home_dir, 'mrad_ws_2602_golf', 'src', 'path_planner_2602_golf', 'csv', 'track_3.csv')
         
         try:
             with open(csv_file_path, mode='w', newline='') as file:
