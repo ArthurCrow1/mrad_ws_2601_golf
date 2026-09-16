@@ -11,15 +11,13 @@ class CsvPathPlayer(Node):
     def __init__(self):
         super().__init__('csv_path_player')
         
-        # Publicador estandar, sin Latch para evitar conflictos con el MPC
         self.path_pub = self.create_publisher(Path, '/planned_path', 10)
         self.path_msg = None
         self.first_publish = True
         
-        # 1. Leemos el archivo CSV una sola vez al arrancar
+        
         self.load_path_from_csv()
         
-        # 2. Creamos un bucle que envia la ruta 1 vez por segundo constantemente
         self.timer = self.create_timer(1.0, self.publish_continuous_path)
 
     def load_path_from_csv(self):
@@ -44,7 +42,6 @@ class CsvPathPlayer(Node):
                     curr_y = float(row['y'])
                     
                     # Filtro anti-duplicados:
-                    # Si el punto actual esta a menos de 2 cm del anterior, se descarta
                     if last_x is not None and last_y is not None:
                         dist = math.hypot(curr_x - last_x, curr_y - last_y)
                         if dist < 0.02:
@@ -67,7 +64,6 @@ class CsvPathPlayer(Node):
 
     def publish_continuous_path(self):
         if self.path_msg is not None and len(self.path_msg.poses) > 0:
-            # Actualizamos la marca de tiempo por protocolo de ROS 2
             self.path_msg.header.stamp = self.get_clock().now().to_msg()
             self.path_pub.publish(self.path_msg)
             

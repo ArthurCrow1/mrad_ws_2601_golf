@@ -32,7 +32,6 @@ class RaceManagerNode(Node):
         latch_qos = QoSProfile(depth=1, durability=DurabilityPolicy.TRANSIENT_LOCAL)
         self.path_pub = self.create_publisher(Path, '/planned_path', latch_qos)
         
-        # Lector de TF para saber de dónde arranca el carro
         self.tf_buffer = tf2_ros.Buffer()
         self.tf_listener = tf2_ros.TransformListener(self.tf_buffer, self)
         
@@ -73,7 +72,7 @@ class RaceManagerNode(Node):
         self.timer = self.create_timer(1.0, self.orchestrate_race, callback_group=self.cb_group)
 
     def orchestrate_race(self):
-        self.timer.cancel()  # Cancelamos el timer para que se ejecute una sola vez
+        self.timer.cancel()  # Cancelar el timer para que se ejecute una sola vez
         self.get_logger().info("Race Manager iniciado. Esperando al PRM...")
         
         self.prm_client.wait_for_service()
@@ -85,7 +84,7 @@ class RaceManagerNode(Node):
             self.get_logger().error("No se detectó el TF del robot. Abortando.")
             return
         
-        # Añadimos la posición EXACTA de inicio como el último checkpoint para cerrar el ciclo
+        # posicion exacta
         self.checkpoints.append((start_pose.pose.position.x, start_pose.pose.position.y))
 
         self.get_logger().info("Calculando la vuelta base...")
@@ -138,9 +137,6 @@ class RaceManagerNode(Node):
         final_path_msg.header.stamp = self.get_clock().now().to_msg()
         final_path_msg.poses = final_race_poses
 
-        # Guardar la ruta en un archivo CSV
-        # Se guarda en la raiz del workspace para encontrarlo facil
-        # /home/arthur/mrad_ws_2602_golf/src/path_planner_2602_golf/csv
         home_dir = os.path.expanduser('~')
         csv_file_path = os.path.join(home_dir, 'mrad_ws_2602_golf', 'src', 'path_planner_2602_golf', 'csv', 'track_3.csv')
         
@@ -154,7 +150,6 @@ class RaceManagerNode(Node):
         except Exception as e:
             self.get_logger().error(f"No se pudo guardar el CSV: {e}")
         
-        # Publicamos unas cuantas veces para asegurar que el MPC (que acaba de arrancar) reciba el mensaje
         for _ in range(3):
             self.path_pub.publish(final_path_msg)
             time.sleep(0.5)
