@@ -104,8 +104,9 @@ def generate_launch_description():
     twist_mux_node = Node(package='twist_mux', 
                     executable='twist_mux',
                     parameters=[twist_mux_params,{'use_sim_time': True}],
-                    remappings=[('/cmd_vel_out','/diffdrive_controller/cmd_vel')]
+                    remappings=[('/cmd_vel_out','/cmd_vel_stamped')]
     )
+    
 
 
 
@@ -118,7 +119,7 @@ def generate_launch_description():
         ),
         DeclareLaunchArgument(
             "world",
-            default_value=os.path.join(get_package_share_directory(gazebo_pkg_name), "worlds", "exam_1_2.sdf"),
+            default_value=os.path.join(get_package_share_directory(gazebo_pkg_name), "worlds", "exam_1.sdf"),
             description="Full path to world SDF file",
         ),
         rsp,

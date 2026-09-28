@@ -138,7 +138,7 @@ class RaceManagerNode(Node):
         final_path_msg.poses = final_race_poses
 
         home_dir = os.path.expanduser('~')
-        csv_file_path = os.path.join(home_dir, 'mrad_ws_2602_golf', 'src', 'path_planner_2602_golf', 'csv', 'track_3.csv')
+        csv_file_path = os.path.join(home_dir, 'mrad_ws_2602_golf', 'src', 'path_planner_2602_golf', 'csv', 'test.csv')
         
         try:
             with open(csv_file_path, mode='w', newline='') as file:

@@ -30,7 +30,8 @@ setup(
         'console_scripts': [
             'ttc_gap_finder = ttc_follow_the_gap_2602_golf.ttc_gap_finder:main',
             'ttc_gap_control = ttc_follow_the_gap_2602_golf.ttc_gap_control:main',
-            'ftw_jd = wall_following_2602_golf.ftw_jd:main'
+            'ftw_jd = wall_following_2602_golf.ftw_jd:main',
+            'finder_real = ttc_follow_the_gap_2602_golf.finder_real:main'
         ],
     },
 )
